@@ -1,3 +1,3 @@
 class Symptom < ApplicationRecord
-  has_many :period_day_symptoms
+  has_many :period_day_symptom
 end
