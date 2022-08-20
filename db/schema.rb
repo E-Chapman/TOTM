@@ -10,9 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_20_113648) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_20_135458) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "period_day_symptoms", force: :cascade do |t|
+    t.bigint "period_day_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "symptom_id", null: false
+    t.index ["period_day_id"], name: "index_period_day_symptoms_on_period_day_id"
+    t.index ["symptom_id"], name: "index_period_day_symptoms_on_symptom_id"
+  end
+
+  create_table "period_days", force: :cascade do |t|
+    t.bigint "period_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["period_id"], name: "index_period_days_on_period_id"
+  end
+
+  create_table "periods", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_periods_on_user_id"
+  end
+
+  create_table "symptoms", force: :cascade do |t|
+    t.string "symptom_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +55,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_20_113648) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "period_day_symptoms", "period_days"
+  add_foreign_key "period_day_symptoms", "symptoms"
+  add_foreign_key "period_days", "periods"
+  add_foreign_key "periods", "users"
 end
