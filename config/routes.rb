@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :periods do
+    resources :period_days
+  end
+  resources :symptoms
+  resources :period_day_symptoms
 end
