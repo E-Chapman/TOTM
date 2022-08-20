@@ -21,4 +21,8 @@ class PeriodsController < ApplicationController
   def get_period
     @period = Period.find(params[:id])
   end
+
+  def period_params
+    params.require(:period).permit(:start_date, :end_date)
+  end
 end
