@@ -10,30 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_20_135458) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_20_165014) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "period_day_symptoms", force: :cascade do |t|
-    t.bigint "period_day_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "symptom_id", null: false
-    t.index ["period_day_id"], name: "index_period_day_symptoms_on_period_day_id"
+    t.bigint "period_id"
+    t.index ["period_id"], name: "index_period_day_symptoms_on_period_id"
     t.index ["symptom_id"], name: "index_period_day_symptoms_on_symptom_id"
-  end
-
-  create_table "period_days", force: :cascade do |t|
-    t.bigint "period_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["period_id"], name: "index_period_days_on_period_id"
   end
 
   create_table "periods", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "start_date"
+    t.date "end_date"
     t.index ["user_id"], name: "index_periods_on_user_id"
   end
 
@@ -55,8 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_20_135458) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "period_day_symptoms", "period_days"
   add_foreign_key "period_day_symptoms", "symptoms"
-  add_foreign_key "period_days", "periods"
   add_foreign_key "periods", "users"
 end
