@@ -1,6 +1,6 @@
 require "test_helper"
 
-class SymptomsControllerTest < ActionDispatch::IntegrationTest
+class PhysicalSymptomTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
