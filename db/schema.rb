@@ -10,32 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_20_165014) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_23_200251) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "moods", force: :cascade do |t|
+    t.bigint "period_day_symptom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "emoji"
+    t.index ["period_day_symptom_id"], name: "index_moods_on_period_day_symptom_id"
+  end
 
   create_table "period_day_symptoms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "symptom_id", null: false
     t.bigint "period_id"
+    t.bigint "mood_id", null: false
+    t.bigint "physical_symptom_id", null: false
+    t.index ["mood_id"], name: "index_period_day_symptoms_on_mood_id"
     t.index ["period_id"], name: "index_period_day_symptoms_on_period_id"
-    t.index ["symptom_id"], name: "index_period_day_symptoms_on_symptom_id"
+    t.index ["physical_symptom_id"], name: "index_period_day_symptoms_on_physical_symptom_id"
   end
 
   create_table "periods", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "start_date"
-    t.date "end_date"
     t.index ["user_id"], name: "index_periods_on_user_id"
   end
 
-  create_table "symptoms", force: :cascade do |t|
-    t.string "symptom_name"
+  create_table "physical_symptoms", force: :cascade do |t|
+    t.bigint "period_day_symptom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "emoji"
+    t.index ["period_day_symptom_id"], name: "index_physical_symptoms_on_period_day_symptom_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,6 +62,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_20_165014) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "period_day_symptoms", "symptoms"
+  add_foreign_key "moods", "period_day_symptoms"
+  add_foreign_key "period_day_symptoms", "moods"
+  add_foreign_key "period_day_symptoms", "physical_symptoms"
   add_foreign_key "periods", "users"
+  add_foreign_key "physical_symptoms", "period_day_symptoms"
 end

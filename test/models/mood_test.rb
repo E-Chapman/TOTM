@@ -1,6 +1,6 @@
 require "test_helper"
 
-class SymptomTest < ActiveSupport::TestCase
+class MoodTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
