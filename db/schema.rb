@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_23_210511) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_25_191113) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flows", force: :cascade do |t|
+    t.string "name"
+    t.string "emoji"
+    t.bigint "period_day_symptom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["period_day_symptom_id"], name: "index_flows_on_period_day_symptom_id"
+  end
 
   create_table "moods", force: :cascade do |t|
     t.bigint "period_day_symptom_id", null: false
@@ -64,6 +73,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_23_210511) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "flows", "period_day_symptoms"
   add_foreign_key "moods", "period_day_symptoms"
   add_foreign_key "period_day_symptoms", "moods"
   add_foreign_key "period_day_symptoms", "physical_symptoms"
