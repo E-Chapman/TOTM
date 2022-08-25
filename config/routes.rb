@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :periods do
     resources :period_days
   end
-  resources :symptoms
+  resources :physical_symptoms
+  resources :moods
   resources :period_day_symptoms
 end

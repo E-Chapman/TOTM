@@ -1,0 +1,7 @@
+<h1>Physical symptoms</h1>
+<div class="container">
+  <% @physical_symptoms.each do |physical_symptoms|  %>
+      <h3><%= link_to physical_symptoms.name, physical_symptoms.emoji, physical_symptoms_path(physical_symptoms)%></h3>
+      </div>
+   <% end %>
+</div>
