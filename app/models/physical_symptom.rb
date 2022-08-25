@@ -1,3 +1,3 @@
 class PhysicalSymptom < ApplicationRecord
-  belongs_to :period_day_symptom
+  has_many :period_day_symptoms
 end
