@@ -1,8 +1,25 @@
-<h1>Physical symptoms</h1>
 <div class="container">
-  <% @physical_symptoms.each do |physical_symptoms|  %>
-      <h3><%= physical_symptoms.name %></h3>
-      <%= physical_symptoms.emoji %>
-      </div>
-   <% end %>
+  <h1>Physical symptoms</h1>
+
+    <% @physical_symptoms.each do |physical_symptoms|  %>
+      <div class="checkbox">
+        <%= physical_symptoms.emoji %>
+        <%= physical_symptoms.name %>
+        <%= check_box_tag physical_symptoms.id %>
+       </div>
+    <% end %>
+
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
