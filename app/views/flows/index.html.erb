@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Flow</h1>
+
+    <% @flows.each do |flows|  %>
+      <div class="checkbox">
+        <%= flows.emoji %>
+        <%= flows.name %>
+        <%= check_box_tag flows.id %>
+       </div>
+    <% end %>
+
+    <div>
+</div>

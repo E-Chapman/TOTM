@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Mood</h1>
+
+    <% @moods.each do |mood|  %>
+      <div class="checkbox">
+        <%= mood.emoji %>
+        <%= mood.name %>
+        <%= check_box_tag mood.id %>
+       </div>
+    <% end %>
+
+    <div>
+</div>
