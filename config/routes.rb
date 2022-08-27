@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   end
   resources :physical_symptoms
   resources :moods
+  resources :flows
   resources :period_day_symptoms
 end

@@ -8,6 +8,8 @@
 
 puts "Cleaning database..."
 PhysicalSymptom.destroy_all
+Mood.destroy_all
+Flow.destroy_all
 
 puts "Creating Physical symptoms"
 
@@ -42,3 +44,45 @@ physical_symptoms.each do |attributes|
 end
 
 puts "Finished!"
+
+
+puts "Creating Moods"
+
+mood = [
+  { name: "Happy", emoji: "😃" },
+  { name: "Fantastic!", emoji: "🤩" },
+  { name: "Good", emoji: "🙂" },
+  { name: "Energised", emoji: "💫" },
+  { name: "Meh", emoji: "😑" },
+  { name: "Duvet day", emoji: "🫣" },
+  { name: "Irritable", emoji: "😠" },
+  { name: "Don't mess with me", emoji: "🤬" },
+  { name: "Horny", emoji: "🫦" },
+  { name: "Neither here nor there", emoji: "🤷🏽‍♀️" },
+  { name: "Down", emoji: "🥺" },
+  { name: "Tearful", emoji: "😢" },
+  { name: "Sensitive", emoji: "😳" },
+  { name: "Dazed", emoji: "😵‍💫" },
+  { name: "Anxious", emoji: "😬" }
+]
+
+mood.each do |attributes|
+  puts attributes
+  symptoms = Mood.create!(attributes)
+  puts "Created #{symptoms.name}"
+end
+
+puts "Creating Flow"
+
+flow = [
+  { name: "Spotting", emoji: "⭕️" },
+  { name: "Light", emoji: "🩸" },
+  { name: "Medium", emoji: "🩸🩸" },
+  { name: "Heavy", emoji: "🩸🩸🩸" }
+]
+
+flow.each do |attributes|
+  puts attributes
+  symptoms = Flow.create!(attributes)
+  puts "Created #{symptoms.name}"
+end
