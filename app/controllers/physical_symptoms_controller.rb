@@ -1,5 +1,5 @@
 class PhysicalSymptomsController < ApplicationController
-  before_action :set_physical_symptom, only: [:edit, :update, :destroy]
+  before_action :set_physical_symptom, only: [:show, :edit, :update, :destroy]
   def new
     @physical_symptom = PhysicalSymptom.new
   end
@@ -9,11 +9,13 @@ class PhysicalSymptomsController < ApplicationController
   def create
     @physical_symptom = PhysicalSymptom.new(physical_symptom_params)
     @physical_symptom.user = current_user
-    if @physical_symptom.save!
+    find_period_day_symptoms
+    @physical_symptom.period_day_symptom = @period_day_symptom
+    @physical_symptom.save!
     redirect_to root_path
-    else
-        render :new
-    end
+  end
+
+  def show
   end
   def edit
   end
@@ -29,11 +31,15 @@ class PhysicalSymptomsController < ApplicationController
   end
 
   private
+
+  def find_period_day_symptoms
+    @period_day_symptom = PeriodDaySymptom.find(params[:period_day_symptom_id])
+  end
   def set_physical_symptom
     @physical_symptom = PhysicalSymptom.find(params[:id])
   end
 
   def physical_symptom_params
-    params.require(:physical_symptom).permit(:name, :emoji)
+    params.permit(:name, :emoji)
   end
 end
