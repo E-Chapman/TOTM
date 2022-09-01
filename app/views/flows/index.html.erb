@@ -1,13 +1,13 @@
 <div class="container">
   <h1>Flow</h1>
-
-    <% @flows.each do |flows|  %>
-      <div class="checkbox">
-        <%= flows.emoji %>
-        <%= flows.name %>
-        <%= check_box_tag flows.id %>
-       </div>
-    <% end %>
-
-    <div>
+   <%= form_with flows: @flows  do |form| %>
+          <% @flows.each do |flows|  %>
+            <div class="checkbox">
+            <span class="emoji"><%= flows.emoji %></span>
+              <%= flows.name %>
+              <%= check_box_tag flows.id %>
+            </div>
+          <% end %>
+      <%= form.submit "Create" %>
+  <% end %>
 </div>
