@@ -10,6 +10,21 @@ puts "Cleaning database..."
 PhysicalSymptom.destroy_all
 Mood.destroy_all
 Flow.destroy_all
+User.destroy_all
+
+puts "Welcoming users..."
+
+[
+    { email: 'yulin@me.com', password: 'P@ssword1' },
+    { email: 'ruqiya@me.com', password: 'P@ssword1' },
+    { email: 'tristan@me.com', password: 'P@ssword1' },
+    { email: 'lucy@me.com', password: 'P@ssword1' },
+    { email: 'elizabeth@me.com', password: 'P@ssword1' }
+  ].each do |user_data|
+    User.create!(user_data)
+    puts "User with email: #{user_data["email"]} successfully created!"
+  end
+
 
 puts "Creating Physical symptoms"
 

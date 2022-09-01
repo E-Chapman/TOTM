@@ -5,9 +5,9 @@ class PeriodDaySymptomsController < ApplicationController
       @period_day_symptom = PeriodDaySymptom.new
   end
 
-        # def index
-        #   @period_day_symptom = Symptom.all
-        # end
+  def index
+    @period_day_symptom = PeriodDaySymptom.all
+  end
 
   def show
   end

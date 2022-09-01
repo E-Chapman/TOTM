@@ -8,7 +8,7 @@ class PhysicalSymptomsController < ApplicationController
   end
   def create
     @physical_symptom = PhysicalSymptom.new(physical_symptom_params)
-    @physical_symptom.user = current_user
+    # @physical_symptom.user = current_user
     find_period_day_symptoms
     @physical_symptom.period_day_symptom = @period_day_symptom
     @physical_symptom.save!

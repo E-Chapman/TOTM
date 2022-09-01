@@ -1,13 +1,25 @@
 class PeriodsController < ApplicationController
-  before_action :authenticate_user!
+  def new
+    @period = Period.new
+  end
+
+  def index
+    @period = Period.all
+  end
+
+  def show
+  end
+
   def create
     @period = Period.new
-    @period.user = current_user
+    @period.user_id = current_user.id
+    @period.start_date = Date.today
+    @period.save!
   end
 
   def update
     get_period
-    @period.update(period_params)
+    @period.update
   end
 
   def delete
@@ -22,7 +34,4 @@ class PeriodsController < ApplicationController
     @period = Period.find(params[:id])
   end
 
-  def period_params
-    params.require(:period).permit(:start_date, :end_date)
-  end
 end

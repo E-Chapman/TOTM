@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :periods do
     resources :period_day_symptoms
-      resources :physical_symptoms
-      resources :moods
-      resources :flows
+  end
+  resources :period_day_symptoms do
+    resources :physical_symptoms
+    resources :moods
+    resources :flows
   end
 end
