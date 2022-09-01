@@ -5,9 +5,15 @@ class PeriodsController < ApplicationController
     @periods = Period.all
   end
 
-  def create
+  def new
     @period = Period.new
+  end
+
+  def create
+    @period = Period.new(period_params)
     @period.user = current_user
+    @period.save
+    redirect_to action: "index"
   end
 
   def update
