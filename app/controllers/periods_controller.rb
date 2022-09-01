@@ -1,5 +1,10 @@
 class PeriodsController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
+
+  def index
+    @periods = Period.all
+  end
+
   def create
     @period = Period.new
     @period.user = current_user
