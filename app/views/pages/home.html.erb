@@ -6,8 +6,8 @@
       <p class="lead"> Lorem Ipsum </p>
       <hr class="my-4">
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button"> Sign Up </a>
-        <a class="btn btn-secondary btn-lg" href="#" role="button"> Log In </a>
+        <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
+        <%= link_to "Sign Up", "users/sign_up", class: "btn btn-secondary btn-lg" %>
       </p>
     </div>
   </div>
