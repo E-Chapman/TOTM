@@ -3,11 +3,16 @@
     <div class="col">
       <h1 class="display-1">Period Calendar</h1>
       <div class ="calendar">
-        <%= month_calendar do |date| %>
+        <%= month_calendar(attribute: :start_date, end_attribute: :end_date, events: @periods) do |date, periods| %>
           <%= date %>
+          <% periods.each do |period| %>
+            <div>
+              <%= link_to "Edit Period", edit_period_path(period), class: "btn btn-primary"%>
+            </div>
+          <% end %>
         <% end %>
-        <%= @periods %>
       </div>
+      <%= link_to "Add New Period", "periods/new", class: "btn btn-primary btn-lg" %>
     </div>
   </div>
 </div>
