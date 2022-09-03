@@ -7,10 +7,16 @@
 //   margin: 0;
 // }
 
+.new-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 nav {
   width: 300px;
-  background: #E8A0BF;
-  color: rgba(0, 0, 0, 0.87);
+  // background: #E8A0BF, opacity 50%;
+  color: white;
   -webkit-clip-path: circle(24px at 30px 24px);
   clip-path: circle(24px at 32px 24px);
   -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
@@ -38,9 +44,15 @@ a {
   user-select: none;
 }
 
-a:hover { background: #ffe082; }
+a:hover { background: #E8A0BF; }
 
-a:active { background: #ffca28; }
+a:hover { opacity: 0.5; }
+
+a:active { background: #E8A0BF; }
+
+// .navbar-toggler {
+//   display: block !important;
+// }
 
 .navicon {
   padding: 23px 20px;
@@ -54,7 +66,7 @@ a:active { background: #ffca28; }
   position: relative;
   width: 20px;
   height: 2px;
-  background: rgba(0, 0, 0, 0.87);
+  background: #E8A0BF;
 }
 
 .navicon div:before,
@@ -63,7 +75,7 @@ a:active { background: #ffca28; }
   content: "";
   width: 20px;
   height: 2px;
-  background: rgba(0, 0, 0, 0.87);
+  background: #E8A0BF;
   position: absolute;
 }
 
@@ -83,18 +95,13 @@ a:active { background: #ffca28; }
 // }
 
 .brand {
-  
   width: 200px;
   height: 200px;
   position: relative;
-  margin: 0 auto;
-    float: right;
-
-  
-  
+  float: right;
 }
+
 .brand:before {
-  
   background-size: 100% 100%;
   content: "TOTM";
   line-height: 205px;
@@ -117,12 +124,11 @@ a:active { background: #ffca28; }
   animation-delay: 0s;
   transform-origin: 50% 50%;
   transform: rotate(0deg);
-  
+  float: right;
 }
 
-
 svg path{
-  positon:absolute;
+  position:absolute;
   fill:none;
   stroke-width:2;
   top:0;
