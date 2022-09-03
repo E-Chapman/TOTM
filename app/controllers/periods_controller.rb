@@ -5,6 +5,10 @@ class PeriodsController < ApplicationController
     @periods = Period.all
   end
 
+  def show
+
+  end
+
   def new
     @period = Period.new
   end
@@ -16,9 +20,15 @@ class PeriodsController < ApplicationController
     redirect_to action: "index"
   end
 
+  def edit
+    get_period
+  end
+
   def update
     get_period
     @period.update(period_params)
+    @period.save
+    redirect_to action: "index"
   end
 
   def delete

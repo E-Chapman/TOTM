@@ -6,8 +6,12 @@
       <p class="lead"> Lorem Ipsum </p>
       <hr class="my-4">
       <p class="lead">
-        <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
-        <%= link_to "Sign Up", "users/sign_up", class: "btn btn-secondary btn-lg" %>
+        <% if user_signed_in? %>
+          <%= link_to "Calendar", "/periods", class: "btn btn-primary btn-lg" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
+          <%= link_to "Sign Up", "users/sign_up", class: "btn btn-secondary btn-lg" %>
+        <% end %>
       </p>
     </div>
   </div>
