@@ -1,0 +1,25 @@
+<%= simple_form_for [@period, @period_day_symptom] do |f| %>
+    <%= f.association :physical_symptom,
+      as: :radio_buttons,
+      label_method: lambda { |symptom| "#{symptom.name} #{symptom.emoji}" },
+      collection_wrapper_tag: 'div',
+      collection_wrapper_class: 'category-wrapper',
+      item_wrapper_class: 'category-item',
+      input_html: {class: 'category-selector'} %>
+    <%= f.association :mood,
+      as: :radio_buttons,
+      label_method: lambda { |mood| "#{mood.name} #{mood.emoji}" },
+      collection_wrapper_tag: 'div',
+      collection_wrapper_class: 'category-wrapper',
+      item_wrapper_class: 'category-item',
+      input_html: {class: 'category-selector'} %>
+    <%#= f.association :flow,
+      as: :radio_buttons,
+      label_method: lambda { |flow| "#{flow.name} #{flow.emoji}" },
+      collection_wrapper_tag: 'div',
+      collection_wrapper_class: 'category-wrapper',
+      item_wrapper_class: 'category-item',
+      input_html: {class: 'category-selector'} %>
+
+    <%= f.button :submit, 'Add Period Day Symptom', class: "btn btn-primary" %>
+  <% end %>

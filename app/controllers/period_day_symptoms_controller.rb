@@ -3,6 +3,7 @@ class PeriodDaySymptomsController < ApplicationController
 
   def new
       @period_day_symptom = PeriodDaySymptom.new
+      @period = Period.find(params[:period_id])
   end
 
         # def index

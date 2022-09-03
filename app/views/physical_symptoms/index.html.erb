@@ -1,13 +1,21 @@
-   <div class="container">
+<div class="container">
   <h1>Physical symptoms</h1>
-   <%= form_with physical_symptoms: @physical_symptoms  do |form| %>
-          <% @physical_symptoms.each do |physical_symptoms|  %>
-            <div class="checkbox">
-            <span class="emoji"><%= physical_symptoms.emoji %></span>
-              <%= physical_symptoms.name %>
-              <%= check_box_tag physical_symptoms.id %>
-            </div>
-          <% end %>
+    <%= simple_form_for @physical_symptom do |form| %>
+        <%= f.input :category,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector'},
+            collection: Snippet::CATEGORIES %>
+              <%# @physical_symptoms.each do |physical_symptoms|  %>
+                <%# <div class="checkbox"> %>
+                  <%# <span class="emoji">= physical_symptoms.emoji</span> %>
+                  <%#= physical_symptoms.name %>
+                <%# </div> %>
+                <%#= check_box_tag physical_symptoms.id %>
+              <%# end %>
       <%= form.submit "Create" %>
-  <% end %>
+    <% end %>
+  </div>
 </div>
