@@ -1,0 +1,7 @@
+<%= simple_form_for [@period] do |form| %>
+      <%= form.label "Period Start Date" %>
+      <%= form.date_field :start_date, class: "form-control", :value => Time.now.strftime('%Y-%m-%d')%>
+      <%= form.label "Period End Date (if already finished)" %>
+      <%= form.date_field :end_date, class: "form-control" %>
+      <%= form.button :submit, "Submit", class: "btn btn-primary btn-lg mt-3" %>
+<% end %>
