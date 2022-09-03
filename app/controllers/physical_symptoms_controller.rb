@@ -1,4 +1,22 @@
 class PhysicalSymptomsController < ApplicationController
+<<<<<<< HEAD
+  before_action :set_physical_symptom, only: [:show, :edit, :update, :destroy]
+  def new
+    @physical_symptom = PhysicalSymptom.new
+  end
+  def index
+    @physical_symptoms = PhysicalSymptom.all
+  end
+
+  def create
+    @physical_symptom = PhysicalSymptom.new(physical_symptom_params)
+    @physical_symptom.user = current_user
+    find_period_day_symptoms
+    @physical_symptom.period_day_symptom = @period_day_symptom
+    @physical_symptom.save!
+    redirect_to root_path
+  end
+=======
   # before_action :set_physical_symptom, only: [:show, :edit, :update, :destroy]
   # def new
   #   @physical_symptom = PhysicalSymptom.new
@@ -15,6 +33,7 @@ class PhysicalSymptomsController < ApplicationController
   #   @physical_symptom.save!
   #   redirect_to root_path
   # end
+>>>>>>> 7eaa991e0837b56aa01b3b54f142b7494814463d
 
   # def show
   # end

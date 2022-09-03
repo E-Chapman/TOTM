@@ -1,4 +1,6 @@
 class PeriodDaySymptom < ApplicationRecord
-  belongs_to :period_day
-  has_many :physical_symptoms
+  belongs_to :period
+  belongs_to :physical_symptom
+  belongs_to :mood
+  belongs_to :flow
 end
