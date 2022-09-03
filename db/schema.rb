@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_25_195546) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_03_141553) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_195546) do
     t.bigint "period_id"
     t.bigint "mood_id", null: false
     t.bigint "physical_symptom_id", null: false
+    t.bigint "flow_id"
     t.index ["mood_id"], name: "index_period_day_symptoms_on_mood_id"
     t.index ["period_id"], name: "index_period_day_symptoms_on_period_id"
     t.index ["physical_symptom_id"], name: "index_period_day_symptoms_on_physical_symptom_id"
