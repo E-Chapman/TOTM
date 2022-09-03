@@ -50,9 +50,9 @@ a:hover { opacity: 0.5; }
 
 a:active { background: #E8A0BF; }
 
-.navbar-toggler {
-  display: block !important;
-}
+// .navbar-toggler {
+//   display: block !important;
+// }
 
 .navicon {
   padding: 23px 20px;
@@ -95,16 +95,13 @@ a:active { background: #E8A0BF; }
 // }
 
 .brand {
-  
   width: 200px;
   height: 200px;
   position: relative;
   float: right;
-  
 }
 
 .brand:before {
-  
   background-size: 100% 100%;
   content: "TOTM";
   line-height: 205px;
@@ -129,7 +126,6 @@ a:active { background: #E8A0BF; }
   transform: rotate(0deg);
   float: right;
 }
-
 
 svg path{
   position:absolute;

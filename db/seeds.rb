@@ -57,7 +57,7 @@ mood = [
   { name: "Duvet day", emoji: "🫣" },
   { name: "Irritable", emoji: "😠" },
   { name: "Don't mess with me", emoji: "🤬" },
-  { name: "Horny", emoji: "🫦" },
+  { name: "Frisky", emoji: "🫦" },
   { name: "Neither here nor there", emoji: "🤷🏽‍♀️" },
   { name: "Down", emoji: "🥺" },
   { name: "Tearful", emoji: "😢" },
