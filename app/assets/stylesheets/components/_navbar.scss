@@ -50,10 +50,6 @@ a:hover { opacity: 0.5; }
 
 a:active { background: #E8A0BF; }
 
-// .navbar-toggler {
-//   display: block !important;
-// }
-
 .navicon {
   padding: 23px 20px;
   cursor: pointer;
@@ -83,6 +79,9 @@ a:active { background: #E8A0BF; }
 
 .navicon div:after { top: 7px; }
 
+.drop-down {
+  width: 200px;
+}
 // body{
 //   display:flex;
 //   justify-content:center;
@@ -97,8 +96,10 @@ a:active { background: #E8A0BF; }
 .brand {
   width: 200px;
   height: 200px;
-  position: relative;
-  float: right;
+  position: absolute;
+  top: -68px;
+  right: -48px;
+  transform: scale(0.50);
 }
 
 .brand:before {
@@ -124,7 +125,7 @@ a:active { background: #E8A0BF; }
   animation-delay: 0s;
   transform-origin: 50% 50%;
   transform: rotate(0deg);
-  float: right;
+  float: top;
 }
 
 svg path{
