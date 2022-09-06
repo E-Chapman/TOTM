@@ -10,6 +10,24 @@ puts "Cleaning database..."
 PhysicalSymptom.destroy_all
 Mood.destroy_all
 Flow.destroy_all
+puts "Destroying Users..."
+User.destroy_all
+
+puts "Welcoming users..."
+
+[
+    { email: 'yulin@me.com', password: 'P@ssword1' },
+    { email: 'ruqiya@me.com', password: 'P@ssword1' },
+    { email: 'tristan@me.com', password: 'P@ssword1' },
+    { email: 'lucy@me.com', password: 'P@ssword1' },
+    { email: 'elizabeth@me.com', password: 'P@ssword1' }
+  ].each do |user_data| # Iterate over each set of user data...
+    # ...create a user with each set of data...
+    User.create!(user_data)
+    # If we reach this line, the user was created (otherwise an exception will have been raised),
+    # therefore no need to save the user in to a variable for putsing data to the terminal.
+    puts "User with email: #{user_data["email"]} successfully created!"
+  end
 
 puts "Creating Physical symptoms"
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_03_141553) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_03_162444) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,7 +34,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_03_141553) do
     t.bigint "period_id"
     t.bigint "mood_id", null: false
     t.bigint "physical_symptom_id", null: false
-    t.bigint "flow_id"
+    t.bigint "flow_id", null: false
+    t.index ["flow_id"], name: "index_period_day_symptoms_on_flow_id"
     t.index ["mood_id"], name: "index_period_day_symptoms_on_mood_id"
     t.index ["period_id"], name: "index_period_day_symptoms_on_period_id"
     t.index ["physical_symptom_id"], name: "index_period_day_symptoms_on_physical_symptom_id"
@@ -68,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_03_141553) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "period_day_symptoms", "flows"
   add_foreign_key "period_day_symptoms", "moods"
   add_foreign_key "period_day_symptoms", "physical_symptoms"
   add_foreign_key "periods", "users"
