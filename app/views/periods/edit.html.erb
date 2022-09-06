@@ -3,4 +3,7 @@
   <div class="col text-center">
     <%= render "form", period: @period, form_type:"edit" %>
   </div>
+  <div class="col text-center">
+    <%= link_to "Add Symptoms", new_period_period_day_symptom_path(@period), class: "btn btn-secondary btn-lg mt-3"%>
+  </div>
 </div>
