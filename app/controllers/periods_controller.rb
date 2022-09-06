@@ -1,5 +1,5 @@
 class PeriodsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @periods = Period.all
@@ -31,10 +31,10 @@ class PeriodsController < ApplicationController
     redirect_to action: "index"
   end
 
-  def delete
+  def destroy
     get_period
     @period.destroy
-    # redirect_to root_path
+    redirect_to action: "index"
   end
 
   private

@@ -9,3 +9,6 @@
       <%= form.date_field :end_date, class: "form-control" %>
       <%= form.button :submit, "Submit", class: "btn btn-primary btn-lg mt-3" %>
 <% end %>
+  <% if form_type == "edit" %>
+    <%= button_to "Delete Period", period_path(@period), method: :delete, class: "btn btn-danger btn-lg mt-3" %>
+  <% end %>
