@@ -13,7 +13,7 @@
       collection_wrapper_class: 'category-wrapper',
       item_wrapper_class: 'category-item',
       input_html: {class: 'category-selector'} %>
-    <%#= f.association :flow,
+    <%= f.association :flow,
       as: :radio_buttons,
       label_method: lambda { |flow| "#{flow.name} #{flow.emoji}" },
       collection_wrapper_tag: 'div',
