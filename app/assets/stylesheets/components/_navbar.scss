@@ -11,6 +11,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: -20%;
 }
 
 nav {
@@ -117,7 +118,7 @@ a:active { background: #E8A0BF; }
   height: 200px;
   margin: 0 auto;
   position: absolute;
-  
+
   z-index: 99999 !important;
 }
 
@@ -166,13 +167,13 @@ svg path{
     transform: scale(.9);
   }100% {
     transform: scale(1);
-  } 
+  }
 }
 
 @keyframes rotate-0 {
   from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-} 
+}
 
 @keyframes rotate-1 {
   from { transform: rotate(0deg); }
