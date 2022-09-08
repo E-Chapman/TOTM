@@ -11,10 +11,11 @@ before_action :set_period_day_symptom, only: [:show, :edit, :destroy]
   end
 
   def create
+    @period = Period.find(params[:period_id])
     @period_day_symptom = PeriodDaySymptom.new(period_day_symptom_params)
-    @period_day_symptom.user = current_user
+    @period_day_symptom.period = @period
     @period_day_symptom.save
-    redirect_to period_period_day_symptoms_path(@period_day_symptom)
+    redirect_to period_path(@period)
   end
 
   def show
