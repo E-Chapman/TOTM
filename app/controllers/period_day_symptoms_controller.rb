@@ -15,12 +15,11 @@ before_action :set_period_day_symptom, only: [:show, :edit, :destroy]
     @period_day_symptom = PeriodDaySymptom.new(period_day_symptom_params)
     @period_day_symptom.period = @period
     @period_day_symptom.save
-    redirect_to period_path(@period)
     # @period_day_symptom.user = current_user
     @period = Period.find(params[:period_id])
     @period_day_symptom.period = @period
     if @period_day_symptom.save!
-      redirect_to root_path
+      redirect_to root_path, notice: "Symptoms added"
     else
       render :new
     end
