@@ -1,7 +1,7 @@
 <%= simple_form_for [@period] do |form| %>
       <%= form.label "Period Start Date" %>
       <% if form_type == "new" %>
-        <%= form.date_field :start_date, class: "form-control", :value => Time.now.strftime('%Y-%m-%d')%>
+        <%= form.date_field :start_date, class: "form-control", :value => Time.now.strftime('%e')%>
       <% else %>
         <%= form.date_field :start_date, class: "form-control" %>
       <% end %>
