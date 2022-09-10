@@ -17,7 +17,7 @@ class PeriodsController < ApplicationController
     @period = Period.new(period_params)
     @period.user = current_user
     @period.save
-    redirect_to action: "index"
+    redirect_to new_period_period_day_symptom_path(@period)
   end
 
   def edit
