@@ -47,7 +47,7 @@
       <div class="col">
         <div>
           <p class="home-period">Period</p>
-          <% time = (@period.start_date - DateTime.now).to_i  %>
+          <% time = (@period.start_date ? @period.start_date - DateTime.now : DateTime.now ).to_i  %>
           <% if time < 0 %>
             <p class="home-period2"><%= -time %> Days ago</p>
           <% else %>
