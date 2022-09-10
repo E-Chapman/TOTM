@@ -26,7 +26,7 @@ before_action :set_period_day_symptom, only: [:show, :edit, :destroy]
   end
 
   def show
-    render :new
+    # render :new
   end
 
   def edit
