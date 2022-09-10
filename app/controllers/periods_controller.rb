@@ -1,12 +1,13 @@
 class PeriodsController < ApplicationController
   before_action :authenticate_user!
+  before_action :get_period, only: [:show]
 
   def index
     @periods = Period.all
   end
 
   def show
-
+    @period_day_symptom = PeriodDaySymptom.find_by(period_id: @period.id)
   end
 
   def new

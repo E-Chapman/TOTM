@@ -1,2 +1,11 @@
 <h1>Period show</h1>
 <%= button_to "Delete Period", @period, method: :delete, class: "btn btn-danger btn-lg mt-3" %>
+
+<%= @period_day_symptom.flow.name %>
+<%= @period_day_symptom.flow.emoji %>
+
+<%= @period_day_symptom.mood.name %>
+<%= @period_day_symptom.mood.emoji %>
+
+<%= @period_day_symptom.physical_symptom.name %>
+<%= @period_day_symptom.physical_symptom.emoji %>
