@@ -46,8 +46,13 @@
     <div class="container text-center text-white circle">
       <div class="col">
         <div>
-          <p class="home-period">Period in</p>
-          <p class="home-period2">6 days</p>
+          <p class="home-period">Period</p>
+          <% time = (@period.start_date - DateTime.now).to_i  %>
+          <% if time < 0 %>
+            <p class="home-period2"><%= -time %> Days ago</p>
+          <% else %>
+          <p class="home-period2"> Day 1</p>
+          <% end %>
             <% if user_signed_in? %>
               <%# <%= link_to "Track", "/periods", class: "btn btn-primary btn-lg" %>
             <% else %>
