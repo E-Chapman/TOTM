@@ -1,14 +1,18 @@
 <div class="footer">
 <div class="footer-links">
-<button class="btn"><i class="fa-solid fa-moon"></i></button>
-<%= link_to "/periods", class: "btn" do %>
+<%= link_to root_path, class: "btn-icon" do %>
+<i class="fa-solid fa-moon"></i>
+<%end%>
+<%= link_to "/periods", class: "btn-icon" do %>
 <i class="fa-solid fa-calendar-days"></i>
 <%end%>
-<%= link_to "/periods/new", class: "btn" do %>
+<%= link_to "/periods/new", class: "btn-icon" do %>
 <i class="fa-solid fa-plus"></i>
 <%end%>
 <button class="btn-icon"><i class="fa-solid fa-lightbulb"></i></button>
-<button class="btn"><i class="fa-brands fa-readme"></i></button>
+<%= link_to "/articles", class: "btn-icon" do %>
+<i class="fa-brands fa-readme"></i>
+<%end%>
 </div>
 </div>
 
