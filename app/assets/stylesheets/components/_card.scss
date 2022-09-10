@@ -157,15 +157,13 @@ h3 {
   box-sizing: border-box;
 }
 
-html{
-  height: 100%;
-  font-family: "Nunito", "Helvetica", "sans-serif";
-  font-size: 14px;
-}
+// html{
+//   height: 100%;
+// }
 
-body{
-  height: 100%;
-}
+// body{
+//   height: 100%;
+// }
 
 .hero-section{
   align-items: flex-start;
@@ -181,7 +179,7 @@ body{
   grid-column-gap: var(--spacing-l);
   grid-row-gap: var(--spacing-l);
   max-width: var(--width-container);
-  width: 100%;
+  width: 65%;
 }
 
 @media(min-width: 540px){
@@ -244,18 +242,19 @@ body{
 }
 
 .card__category{
-  color: var(--text-light);
-  font-size: 1.9rem;
+  color: white;
+  font-size: 20px;
   font-family: "Nunito", "Helvetica", "sans-serif";
   text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
   margin-bottom: var(--spacing-s);
   text-transform: uppercase;
 }
 
-// .card__heading{
-//   color: var(--text-lighter);
-//   font-size: 1.9rem;
-//   text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
-//   line-height: 1.4;
-//   word-spacing: 100vw;
-// }
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 15px;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
