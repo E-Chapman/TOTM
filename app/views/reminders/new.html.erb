@@ -1,0 +1,10 @@
+
+<div class="container">
+  <%= simple_form_for ([@reminder]) do |form| %>
+    <%= form.label "Reminder Text" %>
+    <%= form.text_field :body, class: "form-control"%>
+    <%= form.label "Reminder Date" %>
+    <%= form.datetime_field :reminder_date , class: "form-control"%>
+    <%= form.button :submit, "Submit", class: "btn btn-primary btn-lg mt-3"%>
+  <% end %>
+</div>
