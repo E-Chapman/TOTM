@@ -60,7 +60,7 @@
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {
+.home-row {
   margin: 0 -5px;
   width: 62%;
   // height: 59%;
@@ -68,7 +68,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 70px;
-  margin-left: -16%
+  margin-left: -16%;
+  margin-top: -56px;
 }
 
 /* Clear floats after the columns */
@@ -124,7 +125,7 @@ h3 {
   font-weight: bold;
 }
 
-.header {
+.date-home {
   font-size: 16px;
   color: black;
   text-align: center;
@@ -133,6 +134,7 @@ h3 {
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  margin-top: -42px;
 }
 
 
@@ -184,13 +186,13 @@ h3 {
 
 @media(min-width: 540px){
   .card-grid{
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media(min-width: 960px){
   .card-grid{
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -218,16 +220,16 @@ h3 {
   top: 0;
   transform-origin: center;
   transform: scale(1) translateZ(0);
-  transition: 
+  transition:
     filter 200ms linear,
     transform 200ms linear;
 }
 
 .cards:hover .card__background{
-  transform: scale(1.05) translateZ(0)  
+  transform: scale(1.05) translateZ(0)
 }
 
-.cards:hover { 
+.cards:hover {
   background: transparent; }
 
 .card-grid:hover > .card:not(:hover) .card__background{
