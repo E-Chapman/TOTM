@@ -1,9 +1,9 @@
 
 <%= month_calendar(attribute: :start_date, end_attribute: :end_date, events: @periods) do |date, periods| %>
-  <%= date.day %>
+  <p class="calender-day"><%= date.day %></p>
   <% periods.each do |period| %>
     <div class="period-day">
-      <%= link_to "", period_path(period), class: "calender-button"%>
+      <%= link_to "", period_path(period), class: "calender-button" %>
     </div>
   <% end %>
 <% end %>
