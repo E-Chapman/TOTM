@@ -1,1 +1,23 @@
-<%= @reminders %>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Reminder Date</th>
+      <th scope="col">Reminder</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @reminders.each do |reminder| %>
+    <tr>
+      <td><%= reminder.reminder_date %> </td>
+      <td><%= reminder.body %> </td>
+      <td>
+        <%= button_to "Edit", edit_reminder_path(reminder), class: "btn btn-primary" %>
+        <%= button_to "Delete", reminder_path(reminder), method: :delete, class: "btn btn-danger" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+  </table>
+</div>
