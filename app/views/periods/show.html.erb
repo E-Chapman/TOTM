@@ -1,11 +1,19 @@
-<h1>Period show</h1>
-<%= button_to "Delete Period", @period, method: :delete, class: "btn btn-danger btn-lg mt-3" %>
-
+<h1>Your Symptoms</h1>
+<div class="container">
+Flow:
 <%= @period_day_symptom.flow.name %>
 <%= @period_day_symptom.flow.emoji %>
-
+Mood:
 <%= @period_day_symptom.mood.name %>
 <%= @period_day_symptom.mood.emoji %>
-
+Physical Symptom:
 <%= @period_day_symptom.physical_symptom.name %>
 <%= @period_day_symptom.physical_symptom.emoji %>
+</div>
+
+
+
+
+
+
+<%= button_to "Delete Period", @period, method: :delete, class: "btn btn-danger btn-lg mt-3" %>
