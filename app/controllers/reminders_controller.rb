@@ -2,7 +2,7 @@ class RemindersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @reminders = Reminder.all
+    @reminders = Reminder.order('reminder_date ASC')
   end
 
   def new
@@ -17,23 +17,30 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params)
     @reminder.user_id = current_user.id
     @reminder.save
+    redirect_to action: "index"
   end
 
   def update
     get_reminder
     @reminder.update(reminder_params)
     @reminder.save
+    redirect_to action: "index"
   end
 
   def destroy
     get_reminder
     @reminder.destroy
+    redirect_to action: "index"
+  end
+
+  def edit
+    get_reminder
   end
 
   private
 
   def get_reminder
-    @period = Period.find(params[:id])
+    @reminder = Reminder.find(params[:id])
   end
 
   def reminder_params
