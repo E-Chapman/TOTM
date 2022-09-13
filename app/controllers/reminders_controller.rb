@@ -24,12 +24,17 @@ class RemindersController < ApplicationController
     get_reminder
     @reminder.update(reminder_params)
     @reminder.save
+    redirect_to action: "index"
   end
 
   def destroy
     get_reminder
     @reminder.destroy
     redirect_to action: "index"
+  end
+
+  def edit
+    get_reminder
   end
 
   private
