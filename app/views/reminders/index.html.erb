@@ -1,23 +1,32 @@
 <div class="container">
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col">Reminder Date</th>
-      <th scope="col">Reminder</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @reminders.each do |reminder| %>
-    <tr>
-      <td><%= reminder.reminder_date %> </td>
-      <td><%= reminder.body %> </td>
-      <td>
-        <%= button_to "Edit", edit_reminder_path(reminder), class: "btn btn-primary" %>
-        <%= button_to "Delete", reminder_path(reminder), method: :delete, class: "btn btn-danger" %>
-      </td>
-    </tr>
-  <% end %>
-  </tbody>
-  </table>
+  <div class="row">
+    <div class="col">
+      <h1>Reminders</h1>
+      <%= button_to "Add Reminder", new_reminder_path, method: :get, class: "btn btn-primary"%>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Reminder Date</th>
+          <th scope="col">Reminder</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @reminders.each do |reminder| %>
+        <tr>
+          <td><%= reminder.reminder_date %> </td>
+          <td><%= reminder.body %> </td>
+          <td>
+            <%= button_to "Edit", edit_reminder_path(reminder), method: :get, class: "btn btn-primary" %>
+          </td>
+          <td>
+            <%= button_to "Delete", reminder_path(reminder), method: :delete, class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+      </table>
+    </div>
+  </div>
 </div>
