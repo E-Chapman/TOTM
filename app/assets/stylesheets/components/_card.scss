@@ -6,6 +6,8 @@
   padding-top: 63px;
   opacity: 94%;
   background-color: #a9caff;
+  // box-shadow: 20px 20px 50px 10px pink inset;
+  box-shadow: 20px 20px 50px 10px #ff00be inset;
 }
 
 .home-period {
@@ -16,7 +18,7 @@
   font-size: 150%;
   font-weight: 550;
   padding-top: 27%;
-  font-family: "Nunito", "Helvetica", "sans-serif";
+  // font-family: "Nunito", "Helvetica", "sans-serif";
 }
 
 .home-period2 {
@@ -262,4 +264,17 @@ h3 {
   text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
   line-height: 1.4;
   word-spacing: 100vw;
+}
+
+.display-1.text-center.p-5 {
+  font-size: 150%
+}
+
+
+
+@media (max-width: 540px) {
+  .container .start-period {
+    width: 300px;
+    margin-left: 40px;
+  }
 }
