@@ -126,6 +126,8 @@ h1, .h1 {
   /* For a screen < 540px, this CSS will be read */
   .container {
     width: 300px;
-    margin-left: 25px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
   }
 }
