@@ -1,14 +1,22 @@
 <h1>Your Symptoms</h1>
-<div class="container">
-Flow:
-<%= @period_day_symptom.flow.name %>
-<%= @period_day_symptom.flow.emoji %>
-Mood:
-<%= @period_day_symptom.mood.name %>
-<%= @period_day_symptom.mood.emoji %>
-Physical Symptom:
-<%= @period_day_symptom.physical_symptom.name %>
-<%= @period_day_symptom.physical_symptom.emoji %>
+<div class="container-symptoms">
+  <div class="new">
+      <h1>Flow:</h1>
+      <h2><%= @period_day_symptom.flow.name %></h2>
+      <h3><%= @period_day_symptom.flow.emoji %></h3>
+  </div>
+
+  <div class="new">
+      Mood:
+      <%= @period_day_symptom.mood.name %>
+      <%= @period_day_symptom.mood.emoji %>
+  </div>
+
+  <div class="new">
+      Physical Symptom:
+      <%= @period_day_symptom.physical_symptom.name %>
+      <%= @period_day_symptom.physical_symptom.emoji %>
+  </div>
 </div>
 
 
