@@ -1,10 +1,12 @@
-<div class="container">
+<div class="container-fluid">
   <h1> Edit Reminder </h1>
-  <%= simple_form_for ([@reminder]) do |form| %>
-    <%= form.label "Reminder Text" %>
-    <%= form.input :body, :as => :text, :input_html => {:rows => 3}, required: true, class: "form-control", label: false %>
-    <%= form.label "Reminder Date" %>
-    <%= form.datetime_field :reminder_date , class: "form-control"%>
-    <%= form.button :submit, "Submit", class: "btn btn-primary btn-lg mt-3"%>
-  <% end %>
+  <div class="form-container text-center pb-4">
+    <%= simple_form_for ([@reminder]) do |form| %>
+      <%= form.label "Reminder Text" %>
+      <%= form.text_field :body, :as => :text, :input_html => {:rows => 3}, required: true, class: "form-control reminder-form", label: false %>
+      <%= form.label "Reminder Date" %>
+      <%= form.datetime_field :reminder_date , class: "form-control reminder-form"%>
+      <%= form.button :submit, "Submit", class: "btn btn-primary btn-lg mt-3"%>
+    <% end %>
+  </div>
 </div>

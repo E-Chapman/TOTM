@@ -67,7 +67,6 @@ abbr {
   display: center;
   font-family: 'Nunito';
   font-weight: bolder;
-  margin-left: 125px;
 }
 
 .legend {
@@ -105,6 +104,11 @@ h1, .h1 {
   margin-left: 25px;
   color: navy;
   padding-bottom: 50px;
+}
+
+.reminder-form {
+  width: 100% !important;
+  margin-left: 0px !important;
 }
 
 

@@ -14,9 +14,13 @@
   margin-left: 0px;
 }
 // .row, .calendar-row {
-//   width: 0px;
-// }
+  //   width: 0px;
+  // }
 
+  main, .container-fluid, .simple-calendar {
+    min-height: 660px;
+    overflow: hidden;
+  }
 .calendar-heading {
   margin-bottom: 25px;
   display: flex;
@@ -67,10 +71,10 @@ p.calender-day {
 .period-day {
   position: absolute;
   background-color: #7b69fa;
-  width: 70%;
+  width: 81%;
   height: 65%;
-  top: 9px;
-  left: 9px;
+  top: 11px;
+  left: 4px;
   opacity: 50%;
   border-radius: 50%;
 }
