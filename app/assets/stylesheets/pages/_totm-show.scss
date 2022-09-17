@@ -106,6 +106,11 @@ h1, .h1 {
   padding-bottom: 50px;
 }
 
+.reminder-form {
+  width: 100% !important;
+  margin-left: 0px !important;
+}
+
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
