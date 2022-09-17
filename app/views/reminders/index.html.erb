@@ -2,33 +2,26 @@
   <div class="">
     <div class="">
       <h1 class="pb-2">Reminders</h1>
-      <div class="button-container">
-        <%= button_to new_reminder_path, method: :get, class: "btn btn-primary float-end" do %>
-          <i class="fa-solid fa-plus"></i>
-          Add Reminder
-        <% end %>
-      </div>
-      <div class="break pb-5"></div>
       <div class="table-container pt-3">
         <table style="table-layout:fixed; text-align:center" class="table">
           <thead>
           <tr>
-            <th width="20%" scope="col" class="align-middle">Reminder Date</th>
-            <th width="40%" scope="col" class="align-middle">Reminder</th>
-            <th width="15%" scope="col" class="align-middle">Edit</th>
-            <th width="15%" scope="col" class="align-middle">Delete</th>
+            <th width="20%" scope="col" class="align-middle">Date</th>
+            <th width="31%" scope="col" class="align-middle">Reminder</th>
+            <th width="17%" scope="col" class="align-middle">Edit</th>
+            <th width="17%" scope="col" class="align-middle">Delete</th>
         </thead>
         <tbody>
         <% @reminders.each do |reminder| %>
           <tr>
-            <td><%= reminder.reminder_date %> </td>
-            <td><%= reminder.body %> </td>
-            <td>
+            <td class="align-middle"><%= reminder.reminder_date %> </td>
+            <td class="align-middle"><%= reminder.body %> </td>
+            <td class="align-middle">
               <%= link_to edit_reminder_path(reminder), method: :get, class: "btn btn-primary" do %>
                 <i class="fa-solid fa-pen-to-square"></i>
               <% end %>
             </td>
-            <td>
+            <td class="align-middle">
               <%= link_to reminder_path(reminder), method: :delete, class: "btn btn-danger" do %>
                 <i class="fa-solid fa-trash"></i>
               <% end %>
@@ -37,6 +30,13 @@
         <% end %>
         </tbody>
         </table>
+      </div>
+      <div class="break pb-1"></div>
+      <div class="button-container">
+        <%= button_to new_reminder_path, method: :get, class: "btn btn-primary float-end" do %>
+          <i class="fa-solid fa-plus"></i>
+          Add Reminder
+        <% end %>
       </div>
     </div>
   </div>
