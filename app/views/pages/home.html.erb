@@ -46,12 +46,11 @@
     <div class="container text-center text-white circle">
       <div class="col">
         <div>
-          <p class="home-period">Period</p>
           <% if Period.all.empty? %>
-            <p class="home-period2"> 1 days until next period </p>
+            <p class="home-period2"> Period due today </p>
           <% else %>
            <% time = (@period.start_date - DateTime.now).to_i  %>
-          <p class="home-period2"> Day <%= - time + 1 %> </p>
+          <p class="home-period2">Period Day <%= - time + 1 %> </p>
           <% end %>
             <% if user_signed_in? %>
               <%# <%= link_to "Track", "/periods", class: "btn btn-primary btn-lg" %>
