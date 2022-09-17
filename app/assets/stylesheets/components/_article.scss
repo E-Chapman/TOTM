@@ -3,10 +3,6 @@
   background-position: center;
   height: 152px;
   width: 315px;
-  color: white;
-  font-size: 24px;
-  text-align: justify;
-  font-weight: bold;
   border-radius: 30px;
   padding: 58px;
   display: block;
@@ -16,29 +12,32 @@
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   font-weight: bold;
   border-radius: 30px;
+  color: white;
 }
 
 .story-title {
-  font-size: 22px;
+  font-size: 25px;
   color: white;
   text-align: center;
   font-weight: bold;
   padding: 30px;
+  text-align: center;
+  width: 315px;
+  padding-left: 36px;
 }
 
 .story-content{
   font-size: 18px;
   color: white;
-  text-align: center;
   font-weight: bold;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 86%;
+  text-align: justify;
+  width: 315px;
+  padding-left: 36px;
 }
 
 
@@ -50,4 +49,11 @@ div.scroll-story {
   overflow-y: auto;
   text-align: center;
   padding: 20px;
+}
+.container-article {
+  min-height: 643px;
+}
+
+html:has(body > .card-cat) {
+  overflow: hidden;
 }
