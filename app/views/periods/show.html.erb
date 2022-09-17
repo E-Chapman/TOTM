@@ -5,37 +5,35 @@
 <h1>Your Symptoms</h1>
 <div class="container-symptoms">
   <div class="new">
-      <h1>Flow</h2>
-      <div class="flow">
+    <h1>Flow</h1>
+    <div class="flow">
       <%= @period_day_symptom.flow.name %>
-      <%= @period_day_symptom.flow.emoji %>
-      </div>
+      <div class="emoji-css"><%= @period_day_symptom.flow.emoji %></div>
+    </div>
   </div>
 
   <div class="new">
-      <h1>Mood</h1>
-      <div class="mood">
-      <%= @period_day_symptom.mood.name %>
-      <%= @period_day_symptom.mood.emoji %>
-      </div>
+    <h1>Mood</h1>
+    <div class="mood">
+        <%= @period_day_symptom.mood.name %>
+      <div class="emoji-css"><%= @period_day_symptom.mood.emoji %></div>
+    </div>
   </div>
 
   <div class="new">
       <h1>Physical Symptom</h1>
       <div class="physical">
-      <%= @period_day_symptom.physical_symptom.name %>
-      <%= @period_day_symptom.physical_symptom.emoji %>
+        <%= @period_day_symptom.physical_symptom.name %>
+        <div class="emoji-css"><%= @period_day_symptom.physical_symptom.emoji %></div>
       </div>
   </div>
+
   <div class="new">
-  Notes
- <%= @period_day_symptom.notes %>
+    <h1>Notes</h1>
+    <div class="notes">
+      <%= @period_day_symptom.notes %>
+    </div>
   </div>
+<%= button_to "Delete Period", @period, method: :delete, class: "btn btn-danger btn-lg mt-3", style:"margin-bottom: 16px;" %>
 </div>
 <% end %>
-
-
-
-
-
-<%= button_to "Delete Period", @period, method: :delete, class: "btn btn-danger btn-lg mt-3" %>
