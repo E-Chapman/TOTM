@@ -50,6 +50,6 @@ before_action :set_period_day_symptom, only: [:show, :edit, :destroy]
   end
 
   def period_day_symptom_params
-    params.require(:period_day_symptom).permit(:period_id, :mood_id, :physical_symptom_id, :flow_id)
+    params.require(:period_day_symptom).permit(:period_id, :mood_id, :physical_symptom_id, :flow_id, :notes)
   end
 end
