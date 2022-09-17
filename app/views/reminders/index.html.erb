@@ -1,16 +1,22 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
+<div class="container-fluid">
+  <div class="">
+    <div class="">
       <h1 class="pb-2">Reminders</h1>
-      <%= button_to "Add Reminder", new_reminder_path, method: :get, class: "btn btn-primary"%>
-      <div class="table-reponsive">
-        <table class="table">
+      <div class="button-container">
+        <%= button_to new_reminder_path, method: :get, class: "btn btn-primary float-end" do %>
+          <i class="fa-solid fa-plus"></i>
+          Add Reminder
+        <% end %>
+      </div>
+      <div class="break pb-5"></div>
+      <div class="table-container pt-3">
+        <table style="table-layout:fixed; text-align:center" class="table">
           <thead>
           <tr>
-            <th scope="col">Reminder Date</th>
-            <th scope="col">Reminder</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
+            <th width="20%" scope="col" class="align-middle">Reminder Date</th>
+            <th width="40%" scope="col" class="align-middle">Reminder</th>
+            <th width="15%" scope="col" class="align-middle">Edit</th>
+            <th width="15%" scope="col" class="align-middle">Delete</th>
         </thead>
         <tbody>
         <% @reminders.each do |reminder| %>
