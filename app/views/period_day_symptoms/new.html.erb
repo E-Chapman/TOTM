@@ -1,4 +1,4 @@
-<div class="container">
+<%# <div class="container"> %>
 <%= simple_form_for [@period, @period_day_symptom] do |f| %>
     <%= f.association :physical_symptom,
       as: :radio_buttons,
@@ -25,7 +25,7 @@
 
     <%= f.button :submit, 'Done', class: "btn btn-primary button" %>
   <% end %>
-</div>
+<%# </div> %>
   <%# <%= simple_form_for [@period, @note] do |f| %>
     <%# <%= f.input :content %>
     <%# <%= f.submit "Submit review", class: "btn btn-primary" %>
