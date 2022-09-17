@@ -14,9 +14,13 @@
   margin-left: 0px;
 }
 // .row, .calendar-row {
-//   width: 0px;
-// }
+  //   width: 0px;
+  // }
 
+  main, .container-fluid {
+    min-height: 660px;
+    overflow: hidden;
+  }
 .calendar-heading {
   margin-bottom: 25px;
   display: flex;
