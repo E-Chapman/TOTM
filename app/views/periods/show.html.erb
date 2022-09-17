@@ -1,24 +1,34 @@
+<% if @period_day_symptom.nil? %>
+<p>No symptoms set yet</p>
+<% else  %>
+
 <h1>Your Symptoms</h1>
 <div class="container-symptoms">
   <div class="new">
-      <h1>Flow:</h1>
-      <h2><%= @period_day_symptom.flow.name %></h2>
-      <h3><%= @period_day_symptom.flow.emoji %></h3>
+      <h1>Flow</h2>
+      <div class="flow">
+      <%= @period_day_symptom.flow.name %>
+      <%= @period_day_symptom.flow.emoji %>
+      </div>
   </div>
 
   <div class="new">
-      Mood:
+      <h1>Mood</h1>
+      <div class="mood">
       <%= @period_day_symptom.mood.name %>
       <%= @period_day_symptom.mood.emoji %>
+      </div>
   </div>
 
   <div class="new">
-      Physical Symptom:
+      <h1>Physical Symptom</h1>
+      <div class="physical">
       <%= @period_day_symptom.physical_symptom.name %>
       <%= @period_day_symptom.physical_symptom.emoji %>
+      </div>
   </div>
 </div>
-
+<% end %>
 
 
 
