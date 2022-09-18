@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_17_132144) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
   end
 
   create_table "flows", force: :cascade do |t|
