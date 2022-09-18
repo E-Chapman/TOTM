@@ -10,49 +10,53 @@
 .card-cat {
   background-size: cover;
   background-position: center;
-  height: 152px;
-  width: 315px;
+  height: 100px;
   border-radius: 30px;
-  padding: 58px;
+  padding: 29px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 86%;
+  box-shadow: rgba(79, 23, 124, 0.4) 0px 5px, rgba(79, 23, 124, 0.3) 0px 10px, rgba(79, 23, 124, 0.2) 0px 15px, rgba(79, 23, 124, 0.1) 0px 20px, rgba(79, 23, 124, 0.05) 0px 25px;
 }
 
 .card-title {
-  font-size: 28px;
+  font-size: 25px;
   text-align: center;
   font-weight: bold;
   border-radius: 30px;
   color: white;
 }
 
-.story-title {
+h1.story-content {
   font-size: 25px;
   color: white;
-  text-align: center;
+  text-align: justify;
   font-weight: bold;
-  padding: 30px;
-  text-align: center;
-  width: 315px;
-  padding-left: 36px;
+  width: 248px;
 }
+
+.story-content-1{
+  font-size: 20px;
+  color: white;
+  display: block;
+  text-align: justify;
+  width: 248px;
+}
+
 
 .story-content{
   font-size: 18px;
   color: white;
-  font-weight: bold;
   display: block;
   text-align: justify;
-  width: 315px;
-  padding-left: 36px;
+  width: 248px;
 }
 
 
 div.scroll-story {
   background-color: transparent;
-  width: 600px;
+  width: 368px;
   height: 658px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -65,4 +69,29 @@ div.scroll-story {
 
 html:has(body > .card-cat) {
   overflow: hidden;
+}
+
+.like-solid {
+  font-size: 18px;
+  color: white;
+  padding-bottom: 208px;
+}
+
+.like {
+  font-size: 18px;
+  color: white;
+  padding-bottom: 208px
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+.container-article {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 315px;
 }
