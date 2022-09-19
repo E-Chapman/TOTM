@@ -28,30 +28,42 @@
   color: white;
 }
 
-h1.story-content {
-  font-size: 25px;
-  color: white;
-  text-align: justify;
-  font-weight: bold;
-  width: 248px;
-}
-
-.story-content-1{
-  font-size: 20px;
-  color: white;
-  display: block;
-  text-align: justify;
-  width: 248px;
-}
-
-
-.story-content{
+.story-content-main{
   font-size: 18px;
   color: white;
   display: block;
-  text-align: justify;
+  text-align: center;
+  width: 248px;
+  text-shadow: 3px 3px 20px #EE6983,
+  -2px 1px 30px #EE6983;
+}
+
+
+.story-content-1{
+  font-size: 16px;
+  color: white;
+  display: block;
+  text-align: center;
   width: 248px;
 }
+
+
+.story-content-2{
+  font-size: 15px;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 248px;
+}
+
+.story-content-3{
+  font-size: 9px;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 248px;
+}
+
 
 
 div.scroll-story {
@@ -94,4 +106,43 @@ a:link {
   padding: 20px;
   margin: 0 auto;
   max-width: 315px;
+}
+
+ul {
+  display: block;
+  margin-left: -10px;
+  font-size: 15px;
+  color: white;
+  display: block;
+  width: 248px;
+}
+
+ul li {
+  display: block;
+  position: relative;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: -30px;
+  margin-top: -.9em;
+  background: #f69ec4;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+.container-share {
+  align-content: space-between;
+  text-align: center;
+  color: white;
+  word-spacing: 80px;
+  text-shadow: 3px 3px 20px #EE6983,
+  -2px 1px 30px #EE6983;
 }
