@@ -1,6 +1,6 @@
 .table, .table-striped, tr {
-  height: 62px;
-  background-color: #fbbfd9;
+  height: 80px;
+  background-color: transparent;
   color: #277ae1;
 }
 
@@ -22,19 +22,24 @@
     overflow: hidden;
   }
 .calendar-heading {
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .calendar-heading a {
+  font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: #92b4ec;
   padding: 0 4px;
+  font-size: 27px;
 }
 
 span.calendar-title {
+  font-size: 20px;
   font-weight: bolder;
+  color: white;
 }
  body {
   size: auto;
@@ -71,10 +76,10 @@ p.calender-day {
 .period-day {
   position: absolute;
   background-color: #7b69fa;
-  width: 81%;
-  height: 65%;
-  top: 11px;
-  left: 4px;
+  width: 90%;
+  height: 56%;
+  top: 18px;
+  left: 3px;
   opacity: 50%;
   border-radius: 50%;
 }
@@ -91,4 +96,26 @@ p.calender-day {
 
 .simple-calendar {
   padding: 0 10px;
+  margin-top: 14px;
+}
+
+td.day.wday-1.past.prev-month > .calender-day {
+  color: #ffffff52;
+}
+
+td.day.wday-2.past.prev-month > .calender-day {
+  color: #ffffff52;
+}
+
+td.day.wday-3.past.prev-month > .calender-day {
+  color: #ffffff52;
+}
+
+
+td.day.wday-6.future.next-month > .calender-day {
+  color: #ffffff52;
+}
+
+td.day.wday-0.future.next-month > .calender-day {
+  color: #ffffff52;
 }

@@ -1,67 +1,67 @@
 <main>
-<h1 class="date-home"><%= Time.now.strftime('%A %B %e') %></h1>
-  <div class="home-row">
-    <div class="column">
-      <div class="card">
-      <p class="bold">Mon</p>
-      <h3>5</h3>
+  <h1 class="date-home"><%= Time.now.strftime('%A %B %e') %></h1>
+    <div class="home-row">
+      <div class="column">
+        <div class="card">
+        <p class="bold">Mon</p>
+        <h3>5</h3>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="card">
-      <p class="bold"> Tue </p>
-      <h3>6</h3></div>
-    </div>
-    <div class="column">
-      <div class="card">
-      <p class="bold"> Wed </p>
-      <h3>7</h3>
+      <div class="column">
+        <div class="card">
+        <p class="bold"> Tue </p>
+        <h3>6</h3></div>
       </div>
-    </div>
-    <div class="column">
-      <div class="card thur">
-      <p class="bold"> Thu </p>
-      <h3>8</h3>
+      <div class="column">
+        <div class="card">
+        <p class="bold"> Wed </p>
+        <h3>7</h3>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="card">
-      <p class="bold"> Fri </p>
-      <h3>9</h3>
+      <div class="column">
+        <div class="card thur">
+        <p class="bold"> Thu </p>
+        <h3>8</h3>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="card">
-      <p class="bold"> Sat </p>
-      <h3>10</h3>
+      <div class="column">
+        <div class="card">
+        <p class="bold"> Fri </p>
+        <h3>9</h3>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div class="card">
-      <p class="bold"> Sun </p>
-      <h3>11</h3>
+      <div class="column">
+        <div class="card">
+        <p class="bold"> Sat </p>
+        <h3>10</h3>
+        </div>
       </div>
-    </div>
-    </div>
-    <div class="container text-center text-white circle">
-      <div class="col">
-        <div>
-          <% if Period.all.empty? %>
-            <p class="home-period2"> Period due today </p>
-          <% else %>
-           <% time = (@period.start_date - DateTime.now).to_i  %>
-          <p class="home-period2">Period Day <%= - time + 1 %> </p>
-          <% end %>
-            <% if user_signed_in? %>
-              <%# <%= link_to "Track", "/periods", class: "btn btn-primary btn-lg" %>
-            <% else %>
-              <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
-              <%= link_to "Sign Up", "users/sign_up", class: "btn btn-secondary btn-lg" %>
-            <% end %>
-          </p>
+      <div class="column">
+        <div class="card">
+        <p class="bold"> Sun </p>
+        <h3>11</h3>
         </div>
       </div>
       </div>
-    </div>
-    </div>
+      <div class="container text-center text-white circle">
+        <div class="col">
+          <div>
+            <% if Period.all.empty? %>
+              <p class="home-period2"> Period due today </p>
+            <% else %>
+            <% time = (@period.start_date - DateTime.now).to_i  %>
+            <p class="home-period2">Period Day <%= - time + 1 %> </p>
+            <% end %>
+              <% if user_signed_in? %>
+                <%# <%= link_to "Track", "/periods", class: "btn btn-primary btn-lg" %>
+              <% else %>
+                <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
+                <%= link_to "Sign Up", "users/sign_up", class: "btn btn-secondary btn-lg" %>
+              <% end %>
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
 </main>
