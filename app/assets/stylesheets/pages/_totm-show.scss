@@ -111,6 +111,14 @@ h1, .h1 {
   margin-left: 0px !important;
 }
 
+.reminder-table {
+  table-layout:fixed;
+  text-align:center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #E8A0BF;
+}
+
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
