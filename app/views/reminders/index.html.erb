@@ -3,13 +3,14 @@
     <div class="">
       <h1 class="pb-2">Reminders</h1>
       <div class="table-container pt-3">
-        <table style="table-layout:fixed; text-align:center" class="table">
+        <table class="table table-bordered reminder-table">
           <thead>
           <tr>
             <th width="20%" scope="col" class="align-middle">Date</th>
             <th width="31%" scope="col" class="align-middle">Reminder</th>
             <th width="17%" scope="col" class="align-middle">Edit</th>
             <th width="17%" scope="col" class="align-middle">Delete</th>
+          </tr>
         </thead>
         <tbody>
         <% @reminders.each do |reminder| %>
