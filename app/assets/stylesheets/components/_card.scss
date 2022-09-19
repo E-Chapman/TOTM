@@ -86,21 +86,22 @@
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  box-shadow: rgba(0, 0, 0, 0.40) 0px 2px 4px, rgba(0, 0, 0, 0.30) 0px 7px 13px -3px, rgba(0, 0, 0, 0.20) 0px -3px 0px inset;
   padding: 20px;
   text-align: center;
   background-color: transparent;
   height: 60px;
   font-size: 10px;
-  width: 35%;
+  width: 37%;
   display: flex;
   justify-content: space-evenly;
-  align-content: stretch;
+  border-radius: 12px;
   align-items: center;
+  align-content: stretch;
 }
 
 .thur {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  box-shadow: rgba(0, 0, 0, 0.40) 0px 2px 4px, rgba(0, 0, 0, 0.30) 0px 7px 13px -3px, rgba(0, 0, 0, 0.20) 0px -3px 0px inset;
   padding: 20px;
   text-align: center;
   height: 60px;
