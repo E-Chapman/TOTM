@@ -1,7 +1,7 @@
 .table, .table-striped, tr {
   height: 80px;
   background-color: transparent;
-  color: #277ae1;
+  color: #6f38c5;;
 }
 
 .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
@@ -59,6 +59,21 @@ span.calendar-title {
   right: 6px;
 }
 
+a.calender-button {
+  border: none;
+  cursor: pointer;
+  display: center;
+  opacity: 50%;
+  margin: 6px;
+  border-radius: 50px;
+  padding-bottom: 0px;
+  position: relative;
+  padding: 7px 17px;
+  top: 8px;
+  right: 6px;
+  background-color: transparent;
+}
+
 td.day.has-events {
   position: relative;
 }
@@ -75,7 +90,7 @@ p.calender-day {
 
 .period-day {
   position: absolute;
-  background-color: #7b69fa;
+  background-color: #6f38c5;
   width: 90%;
   height: 56%;
   top: 18px;

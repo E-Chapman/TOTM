@@ -43,14 +43,16 @@
 // }
 
 input.btn.btn.btn-primary.btn-lg.mt-3.submit-new {
-  background-color: #b51b94;
+  background-color: #6f38c5;
   border: none;
   color: aliceblue;
   padding: 5px 5px;
-  font-size: 13px;
+  font-size: 20px;
   cursor: pointer;
-  display: center;
+  display: initial;
   font-family: 'Nunito';
   font-weight: bolder;
-  margin-right: 110px;
+  margin-right: 8px;
+  width: 90px;
+  height: 50px;
 }
