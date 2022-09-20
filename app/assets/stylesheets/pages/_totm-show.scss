@@ -3,7 +3,7 @@
   // justify-content: space-evenly;
   //
   overflow: scroll;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   color: crimson;
   font-weight: normal;
   font-size: xx-large;
@@ -70,7 +70,7 @@ abbr {
   background-color:#F1D0E0;
   margin-top: 50px;
   padding: 6px;
-  margin-left: 11px;
+  // margin-left: 11px;
 }
 
 .btn {
@@ -96,7 +96,7 @@ abbr {
 
 .col-form-label {
   padding-top: calc(0.375rem + 1px);
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
@@ -127,6 +127,11 @@ h1, .h1 {
   margin-left: 0px !important;
 }
 
+
+.lab {
+  align-items: center;
+}
+
 .reminder-table {
   table-layout:fixed;
   text-align:center;
@@ -134,6 +139,7 @@ h1, .h1 {
   overflow: hidden;
   background-color: #E8A0BF;
 }
+
 
 
 @media (max-width: 960px) {

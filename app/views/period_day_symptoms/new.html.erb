@@ -21,7 +21,10 @@
       collection_wrapper_class: 'category-wrapper',
       item_wrapper_class: 'category-item',
       input_html: {class: 'category-selector'} %>
-    <%= f.input :notes %>
-
-    <%= f.button :submit, 'Done', class: "btn btn-primary button" %>
+    <div class="lab">
+    <%= f.input :notes, input_html: {class: "notes"} %>
+    </div>
+    <div class="pdsbutton">
+    <%= f.button :submit, 'Done', class: "pdsbutt btn btn-primary button" %>
+    </div>
   <% end %>

@@ -52,6 +52,13 @@ input.btn.btn.btn-primary.btn-lg.mt-3.submit-new {
   display: initial;
   font-family: 'Nunito';
   font-weight: bolder;
+}
+
+.pdsbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-right: 8px;
   width: 90px;
   height: 50px;
