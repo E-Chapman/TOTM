@@ -51,7 +51,7 @@ abbr {
     border-radius: 10px;
     background: transparent;
     height: 70px;
-    width: 70px;
+    width: 109px;
     align-items: center;
     justify-content: center;
     margin: 0 8px;
@@ -61,7 +61,7 @@ abbr {
 .category-selector:checked + label {
   // color: white !important;
   background: #e8a0bf99;
-  border: 2px solid #E8A0BF;
+  // border: 2px solid #E8A0BF;
 }
 
 .button {
@@ -97,7 +97,7 @@ abbr {
 .col-form-label {
   padding-top: calc(0.375rem + 1px);
   // padding-bottom: 30px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   font-size: inherit;
   line-height: 1.5;
   font-family: 'Nunito';
