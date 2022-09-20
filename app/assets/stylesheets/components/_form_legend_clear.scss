@@ -11,7 +11,7 @@ legend ~ div.form-check:first-of-type {
 
 .form-control {
   display: block;
-  width: 48%;
+  width: 100%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -26,5 +26,5 @@ legend ~ div.form-check:first-of-type {
   border-radius: 2px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 16px;
-  margin-left: 80px;
+  // margin-left: 96px;
 }
