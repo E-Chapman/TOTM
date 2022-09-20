@@ -10,7 +10,9 @@
 
 button.btn.btn-danger.btn-lg.mt-3 {
   background-color: #6f38c5;
-  border-radius: 8px;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 16px;
 }
 
 .btn:hover {
@@ -51,12 +53,13 @@ input.btn.btn.btn-primary.btn-lg.mt-3.submit-new {
   background-color: #6f38c5;
   border: none;
   color: aliceblue;
-  padding: 5px 5px;
+  padding: 5px 9px;
   font-size: 20px;
   cursor: pointer;
   display: initial;
   font-family: 'Nunito';
   font-weight: bolder;
+  border-radius: 5px;
 }
 
 .pdsbutton {
@@ -68,4 +71,19 @@ input.btn.btn.btn-primary.btn-lg.mt-3.submit-new {
   width: 90px;
   // height: 50px;
   margin-left: 143px;
+}
+
+input.btn.pdsbutton.btn.btn-primary.button {
+  background-color: #6f38c5;
+  border: none;
+  color: aliceblue;
+  padding: 5px 5px;
+  font-size: 20px;
+  cursor: pointer;
+  display: initial;
+  font-family: 'Nunito';
+  font-weight: bolder;
+  margin-top: 0px;
+  border-radius: 5px;
+
 }
