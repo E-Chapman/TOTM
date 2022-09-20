@@ -45,7 +45,8 @@
       </div>
       <div class="text-center text-white circle" style="background-image: url(<%= image_path 'moon.png' %>); background-position: center; background-size: cover;">
         <% if Period.all.empty? %>
-          <p class="home-period2"> Period due today </p>
+          <p class="home-period"> Period: </p>
+          <p class="home-period2"> Due today </p>
         <% else %>
           <% time = (@period.start_date - DateTime.now).to_i %>
           <p class="home-period">Period:</p>
