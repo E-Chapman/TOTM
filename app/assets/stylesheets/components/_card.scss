@@ -379,15 +379,21 @@ div.scroll {
   }
 
   textarea.form-control {
-    width: 500px;
+    width: 100%;
     max-width: 95%;
     font-size: 19px;
-    border: none;
-    background-attachment: local;
-    background-image: linear-gradient(to right, #00000000, #00000000 10px, transparent 10px), linear-gradient(to left, #00000000, #00000000 10px, transparent 10px), repeating-linear-gradient(#00000000, #00000000 36px, #6F38C4 37px, #6f38c5 37px);
-    line-height: 38px;
+    // border: none;
+    // background-attachment: local;
+    // background-image: linear-gradient(to right, #00000000, #00000000 10px, transparent 10px), linear-gradient(to left, #00000000, #00000000 10px, transparent 10px), repeating-linear-gradient(#00000000, #00000000 36px, #6F38C4 37px, #6f38c5 37px);
+    // line-height: 38px;
+    // padding: 6.3333333333px 10px;
+    // resize: none;
+    // border-radius: 0px;
+    // background-color: #00000000;
+    line-height: 33px;
     padding: 6.3333333333px 10px;
     resize: none;
-    border-radius: 0px;
-    background-color: #00000000;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 10px;
 }
