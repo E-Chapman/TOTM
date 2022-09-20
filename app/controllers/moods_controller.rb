@@ -46,4 +46,3 @@ class MoodsController < ApplicationController
   #   params.permit(:name, :emoji)
   # end
 end
-

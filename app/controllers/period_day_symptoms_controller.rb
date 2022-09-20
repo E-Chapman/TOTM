@@ -1,9 +1,9 @@
 class PeriodDaySymptomsController < ApplicationController
-before_action :set_period_day_symptom, only: [:show, :edit, :destroy]
+  before_action :set_period_day_symptom, only: %i[show edit destroy]
 
   def new
-      @period_day_symptom = PeriodDaySymptom.new
-      @period = Period.find(params[:period_id])
+    @period_day_symptom = PeriodDaySymptom.new
+    @period = Period.find(params[:period_id])
   end
 
   def index
