@@ -1,3 +1,12 @@
+#new_period_day_symptom {
+  .button {
+    margin-top: 0;
+  }
+  label {
+    padding-top: 0;
+  }
+}
+
 .category-wrapper {
   display: flex;
   // justify-content: space-evenly;
@@ -49,7 +58,7 @@ abbr {
     padding: 8px;
     border: 1px solid #6f38c5;
     border-radius: 10px;
-    background: transparent;
+    background: #00000012;
     height: 70px;
     width: 109px;
     align-items: center;
@@ -125,6 +134,12 @@ h1, .h1 {
 .reminder-form {
   width: 100% !important;
   margin-left: 0px !important;
+  font-size: 1rem !important;
+}
+
+.reminder-label {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
 }
 
 
@@ -138,8 +153,17 @@ h1, .h1 {
   border-radius: 10px;
   overflow: hidden;
   background-color: #E8A0BF;
+  border-color: #6f38c5;
 }
 
+.reminder-button {
+  background-color: #6f38c5;
+  border-radius: 5px;
+}
+
+.thead-custom {
+  background-color: #f1bee9;
+}
 
 
 @media (max-width: 960px) {

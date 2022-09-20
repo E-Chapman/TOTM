@@ -12,9 +12,11 @@ body {
 
 
 .new-navbar {
-  width: 100%;
+  // width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: -50px;
+  overflow: hidden;
   // margin-bottom: -20%;
 }
 
@@ -103,11 +105,13 @@ a:active { background: #E8A0BF; }
 // }
 
 .brand {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: -68px;
-  right: -55px;
+  // width: 200px;
+  // height: 200px;
+  // position: absolute;
+  // top: -68px;
+  // right: -55px;
+  margin-top: -68px;
+  margin-right: -55px;
   transform: scale(0.50);
 }
 
@@ -135,6 +139,7 @@ a:active { background: #E8A0BF; }
   transform-origin: 50% 50%;
   transform: rotate(0deg);
   float: top;
+  height: 100%;
 }
 
 svg path{

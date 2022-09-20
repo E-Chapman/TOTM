@@ -46,5 +46,4 @@ class RemindersController < ApplicationController
   def reminder_params
     params.require(:reminder).permit(:reminder_date, :body)
   end
-
 end
