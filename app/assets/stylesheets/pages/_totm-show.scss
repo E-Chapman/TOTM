@@ -125,6 +125,12 @@ h1, .h1 {
 .reminder-form {
   width: 100% !important;
   margin-left: 0px !important;
+  font-size: 1rem !important;
+}
+
+.reminder-label {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
 }
 
 
@@ -138,8 +144,17 @@ h1, .h1 {
   border-radius: 10px;
   overflow: hidden;
   background-color: #E8A0BF;
+  border-color: #6f38c5;
 }
 
+.reminder-button {
+  background-color: #6f38c5;
+  border-radius: 5px;
+}
+
+.thead-custom {
+  background-color: #f1bee9;
+}
 
 
 @media (max-width: 960px) {
