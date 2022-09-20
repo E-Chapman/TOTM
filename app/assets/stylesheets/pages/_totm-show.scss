@@ -24,22 +24,38 @@ abbr {
 }
 
 .category-selector + label {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  box-sizing: border-box;
-  // width: 40%;
-  font-size: 10px;
-  text-align: center;
-  padding: 8px;
-  border: 1px solid #EAEAEA;
-  border-radius: 10px;
-  background: #F1D0E0;
-  height: 70px;
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  margin: 0 8px;
+  // display: flex;
+  // flex-direction: column;
+  // cursor: pointer;
+  // box-sizing: border-box;
+  // // width: 40%;
+  // font-size: 10px;
+  // text-align: center;
+  // padding: 8px;
+  // border: 1px solid #EAEAEA;
+  // border-radius: 10px;
+  // background: #F1D0E0;
+  // height: 70px;
+  // width: 70px;
+  // align-items: center;
+  // justify-content: center;
+  // margin: 0 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #6f38c5;
+    border-radius: 10px;
+    background: transparent;
+    height: 70px;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .category-selector:checked + label {
@@ -111,9 +127,20 @@ h1, .h1 {
   margin-left: 0px !important;
 }
 
+
 .lab {
   align-items: center;
 }
+
+.reminder-table {
+  table-layout:fixed;
+  text-align:center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #E8A0BF;
+}
+
+
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
@@ -132,8 +159,8 @@ h1, .h1 {
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
   .container {
-    width: 300px;
-    margin-left: 40px;
+    width: 341px;
+    margin-left: 14px;
     display: flex;
     align-items: center;
   }

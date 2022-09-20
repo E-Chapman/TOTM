@@ -13,8 +13,8 @@ legend ~ div.form-check:first-of-type {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 200;
   line-height: 1.5;
   color: #212529;
   background-color: #F4F4F4;
@@ -27,4 +27,29 @@ legend ~ div.form-check:first-of-type {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 16px;
   // margin-left: 96px;
+  // border-radius: 64px;
+  // margin-left: 9px;
+}
+
+
+input#period_start_date {
+  width: 237px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  display: initial;
+}
+
+label.string.optional {
+  font-size: 30px;
+  margin-bottom: 32px;
+  margin-top: -49px;
+  text-align: center;
+  display: inline-block;
+  width: 140px;
+}
+
+label.form-label.text.optional {
+  display: flex;
+  justify-content: center;
 }
