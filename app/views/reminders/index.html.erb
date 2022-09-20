@@ -5,7 +5,7 @@
       <h1 class="pb-2">Reminders</h1>
       <div class="table-container pt-3">
         <table class="table table-bordered reminder-table">
-          <thead>
+          <thead class="thead-custom">
           <tr>
             <th width="20%" scope="col" class="align-middle">Date</th>
             <th width="31%" scope="col" class="align-middle">Reminder</th>
@@ -19,12 +19,12 @@
             <td class="align-middle"><%= reminder.reminder_date %> </td>
             <td class="align-middle"><%= reminder.body %> </td>
             <td class="align-middle">
-              <%= link_to edit_reminder_path(reminder), method: :get, class: "btn btn-primary" do %>
+              <%= link_to edit_reminder_path(reminder), method: :get, class: "btn btn-primary reminder-button" do %>
                 <i class="fa-solid fa-pen-to-square"></i>
               <% end %>
             </td>
             <td class="align-middle">
-              <%= link_to reminder_path(reminder), method: :delete, class: "btn btn-danger" do %>
+              <%= link_to reminder_path(reminder), method: :delete, class: "btn btn-danger reminder-button" do %>
                 <i class="fa-solid fa-trash"></i>
               <% end %>
             </td>
@@ -35,7 +35,7 @@
       </div>
       <div class="break pb-1"></div>
       <div class="button-container">
-        <%= button_to new_reminder_path, method: :get, class: "btn btn-primary float-end" do %>
+        <%= button_to new_reminder_path, method: :get, class: "btn btn-primary float-end reminder-button" do %>
           <i class="fa-solid fa-plus"></i>
           Add Reminder
         <% end %>
