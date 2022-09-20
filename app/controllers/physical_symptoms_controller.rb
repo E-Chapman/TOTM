@@ -6,7 +6,7 @@ class PhysicalSymptomsController < ApplicationController
   # def index
   #   @physical_symptoms = PhysicalSymptom.all
   # end
-  
+
   # def create
   #   @physical_symptom = PhysicalSymptom.new(physical_symptom_params)
   #   @physical_symptom.user = current_user
