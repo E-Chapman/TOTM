@@ -1,5 +1,5 @@
 <%= simple_form_for ([@period]) do |form| %>
-      <h1 class="heading"><%= form.label "My Period started" %></h1>
+      <h1 class="heading-add"><%= form.label "My Period started" %></h1>
       <% if form_type == "new" %>
         <%= form.date_field :start_date, class: "form-control", :value => Time.now.strftime('%e')%>
       <% else %>

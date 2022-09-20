@@ -4,71 +4,52 @@
       <div class="column">
         <div class="card">
         <p class="bold">Mon</p>
-        <h3>19</h3>
+        <h3 class="numbers">19</h3>
         </div>
       </div>
       <div class="column">
         <div class="card">
         <p class="bold"> Tue </p>
-        <h3>20</h3></div>
+        <h3 class="numbers">20</h3></div>
       </div>
       <div class="column">
         <div class="card">
         <p class="bold"> Wed </p>
-        <h3>21</h3>
+        <h3 class="numbers">21</h3>
         </div>
       </div>
       <div class="column">
         <div class="card">
         <p class="bold"> Thu </p>
-        <h3>22</h3>
+        <h3 class="numbers">22</h3>
         </div>
       </div>
       <div class="column">
         <div class="card">
         <p class="bold"> Fri </p>
-        <h3>23</h3>
+        <h3 class="numbers">23</h3>
         </div>
       </div>
       <div class="column">
         <div class="card thur">
         <p class="bold"> Sat </p>
-        <h3>24</h3>
+        <h3 class="numbers">24</h3>
         </div>
       </div>
       <div class="column">
         <div class="card">
         <p class="bold"> Sun </p>
-        <h3>25</h3>
+        <h3 class="numbers">25</h3>
         </div>
       </div>
       </div>
-<<<<<<< HEAD
-      <div class="text-center text-white circle" style="background-image: url(<%= image_path 'moon.png' %>); background-position: center; background-size: cover;">
-            <% if Period.all.empty? %>
-              <p class="home-period2"> Period due today </p>
-            <% else %>
-            <% time = (@period.start_date - DateTime.now).to_i  %>
-            <p class="home-period">Period:</p>
-            <p class="home-period2"> Day <%= - time + 1 %> </p>
-            <% end %>
-              <% if user_signed_in? %>
-                <%# <%= link_to "Track", "/periods", class: "btn btn-primary btn-lg" %>
-              <% else %>
-                <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
-                <%= link_to "Sign Up", "users/sign_up", class: "btn btn-secondary btn-lg" %>
-              <% end %>
-            </p>
-          </div>
-        </div>
-        </div>
-=======
       <div class="text-center text-white circle" style="background-image: url(<%= image_path 'moon.png' %>); background-position: center; background-size: cover;">
         <% if Period.all.empty? %>
           <p class="home-period2"> Period due today </p>
         <% else %>
-        <% time = (@period.start_date - DateTime.now).to_i %>
-        <p class="home-period2">Period Day <%= - time + 1 %> </p>
+          <% time = (@period.start_date - DateTime.now).to_i %>
+          <p class="home-period">Period:</p>
+          <p class="home-period2"> Day <%= - time + 1 %> </p>
         <% end %>
         <% if user_signed_in? %>
           <%# <%= link_to "Track", "/periods", class: "btn btn-primary btn-lg" %>
@@ -76,7 +57,6 @@
           <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
           <%= link_to "Sign Up", "users/sign_up", class: "btn btn-secondary btn-lg" %>
         <% end %>
->>>>>>> 7ffb5a32abd0f434f05ad342e49fb7b91898a911
       </div>
       </div>
     </div>
