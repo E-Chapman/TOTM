@@ -2,10 +2,10 @@
 <p>No symptoms set yet</p>
 <% else  %>
 
-<h1>Your Symptoms</h1>
+<h1 class="heading">Your Symptoms</h1>
 <div class="container-symptoms">
   <div class="new">
-    <h1>Flow</h1>
+    <%# <h1>Flow</h1> %>
     <div class="flow">
       <%= @period_day_symptom.flow.name %>
       <div class="emoji-css"><%= @period_day_symptom.flow.emoji %></div>
@@ -13,7 +13,7 @@
   </div>
 
   <div class="new">
-    <h1>Mood</h1>
+    <%# <h1>Mood</h1> %>
     <div class="mood">
         <%= @period_day_symptom.mood.name %>
       <div class="emoji-css"><%= @period_day_symptom.mood.emoji %></div>
@@ -21,7 +21,7 @@
   </div>
 
   <div class="new">
-      <h1>Physical Symptom</h1>
+      <%# <h1>Physical Symptom</h1> %>
       <div class="physical">
         <%= @period_day_symptom.physical_symptom.name %>
         <div class="emoji-css"><%= @period_day_symptom.physical_symptom.emoji %></div>

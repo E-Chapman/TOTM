@@ -14,7 +14,9 @@
   font-size: 150%;
   font-weight: 550;
   padding-top: 27%;
-  // font-family: "Nunito", "Helvetica", "sans-serif";
+  position: relative;
+  width: 90%;
+  height: 66%;
 }
 
 .home-period2 {
@@ -25,7 +27,8 @@
   margin: 0;
   text-shadow: 0px 0px 12px rgba(0,0,0,0.2);
   font-weight: bold;
-  font-family: "Nunito", "Helvetica", "sans-serif";
+  position: absolute;
+  z-index: 39;
 }
 
 .calender-cards {
@@ -109,7 +112,7 @@
   justify-content: space-evenly;
   align-content: stretch;
   align-items: center;
-  background-color: #6f38c5;
+  background-color: white;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
@@ -127,6 +130,7 @@ h3 {
 
 .bold {
   font-weight: bold;
+  color: #6e3dc6;
 }
 
 .date-home {
@@ -139,6 +143,7 @@ h3 {
   justify-content: center;
   font-weight: bold;
   margin-top: 8px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
 }
 
 :root{
@@ -234,7 +239,7 @@ label {
   // -webkit-text-stroke: 0.5px #9e9d9d;
   color: white;
   font-size: 31px;
-  font-family: 'Nunito';
+  font-family: "Work Sans", "Helvetica", "sans-serif";
   // padding-left: 140px;
   width: 100%;
   text-align: center;
@@ -401,4 +406,18 @@ font-weight: bold;
     border-radius: 20px;
     background-color: white;
     margin-left: 10px;
+}
+
+h1.heading {
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  color: white;
+}
+
+h1.heading-add {
+  margin-bottom: -30px;
+}
+
+.numbers {
+  font-size: 15px;
+  font-weight: bold;
 }
