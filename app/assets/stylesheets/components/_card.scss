@@ -2,6 +2,7 @@
   height: 331px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -10,13 +11,14 @@
   color: #fff;
   display: flex;
   justify-content: center;
-  margin-top: -83px;
+  margin-bottom: 0;
   font-size: 150%;
   font-weight: 550;
-  padding-top: 27%;
-  position: relative;
-  width: 90%;
-  height: 66%;
+  // margin-top: -83px;
+  // padding-top: 27%;
+  // position: relative;
+  // width: 90%;
+  // height: 66%;
 }
 
 .home-period2 {
@@ -27,8 +29,9 @@
   margin: 0;
   text-shadow: 0px 0px 12px rgba(0,0,0,0.2);
   font-weight: bold;
-  position: absolute;
-  z-index: 39;
+  line-height: 30px;
+  // position: absolute;
+  // z-index: 39;
 }
 
 .calender-cards {
@@ -212,9 +215,18 @@ html{
 }
 
 .start-period {
-    width: 300px;
-    margin-left: 40px;
-    margin-top: 155px;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 155px;
+  label {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  h1 {
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+
+  }
 }
 
 // body {
