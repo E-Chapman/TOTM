@@ -2,8 +2,7 @@
 <%= month_calendar(attribute: :start_date, end_attribute: :end_date, events: @periods) do |date, periods| %>
   <p class="calender-day"><%= date.day %></p>
   <% periods.each do |period| %>
-    <div class="period-day">
-      <%= link_to "", period_path(period), class: "calender-button" %>
-    </div>
+    <%= link_to "", period_path(period), class: "period-event-absolute" %>
+    <span class="period-day period-event-absolute"></span>
   <% end %>
 <% end %>

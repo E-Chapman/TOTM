@@ -19,7 +19,7 @@ class PeriodDaySymptomsController < ApplicationController
     @period = Period.find(params[:period_id])
     @period_day_symptom.period = @period
     if @period_day_symptom.save!
-      redirect_to root_path, notice: "Symptoms added"
+      redirect_to periods_path(@period)
     else
       render :new
     end

@@ -1,32 +1,38 @@
 .circle {
-  border-radius: 58%;
-  /* box-shadow: 0.375em 0.375em 0 0 rgb(15 28 63 / 13%); */
   height: 331px;
-  width: 318px;
-  padding-top: 63px;
-  opacity: 94%;
-  background-color: #a9caff;
-  box-shadow: 20px 20px 50px 10px #ff00bea6 inset;
+  width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-period {
   color: #fff;
   display: flex;
   justify-content: center;
-  margin-top: -83px;
+  margin-bottom: 0;
   font-size: 150%;
   font-weight: 550;
-  padding-top: 27%;
-  // font-family: "Nunito", "Helvetica", "sans-serif";
+  // margin-top: -83px;
+  // padding-top: 27%;
+  // position: relative;
+  // width: 90%;
+  // height: 66%;
 }
 
 .home-period2 {
   color: #fff;
   display: flex;
   justify-content: center;
-  font-size: 300%;
+  font-size: 38px;
+  margin: 0;
+  text-shadow: 0px 0px 12px rgba(0,0,0,0.2);
   font-weight: bold;
-  font-family: "Nunito", "Helvetica", "sans-serif";
+  line-height: 30px;
+  // position: absolute;
+  // z-index: 39;
 }
 
 .calender-cards {
@@ -110,7 +116,7 @@
   justify-content: space-evenly;
   align-content: stretch;
   align-items: center;
-  background-color: #6f38c5;
+  background-color: white;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
@@ -128,6 +134,7 @@ h3 {
 
 .bold {
   font-weight: bold;
+  color: #6e3dc6;
 }
 
 .date-home {
@@ -140,6 +147,7 @@ h3 {
   justify-content: center;
   font-weight: bold;
   margin-top: 8px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
 }
 
 :root{
@@ -208,9 +216,18 @@ html{
 }
 
 .start-period {
-    width: 300px;
-    margin-left: 40px;
-    margin-top: 155px;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 155px;
+  label {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  h1 {
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+
+  }
 }
 
 // body {
@@ -235,7 +252,7 @@ label {
   // -webkit-text-stroke: 0.5px #9e9d9d;
   color: white;
   font-size: 31px;
-  font-family: 'Nunito';
+  font-family: "Work Sans", "Helvetica", "sans-serif";
   // padding-left: 140px;
   width: 100%;
   text-align: center;
@@ -402,4 +419,18 @@ font-weight: bold;
     border-radius: 20px;
     background-color: white;
     margin-left: 10px;
+}
+
+h1.heading {
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  color: white;
+}
+
+h1.heading-add {
+  margin-bottom: -30px;
+}
+
+.numbers {
+  font-size: 15px;
+  font-weight: bold;
 }

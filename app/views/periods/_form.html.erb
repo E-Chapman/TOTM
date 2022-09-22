@@ -1,11 +1,11 @@
 <%= simple_form_for ([@period]) do |form| %>
-      <%= form.label "My Period started" %>
+      <h1 class="heading-add"><%= form.label "My Period started" %></h1>
       <% if form_type == "new" %>
         <%= form.date_field :start_date, class: "form-control", :value => Time.now.strftime('%e')%>
       <% else %>
         <%= form.date_field :start_date, class: "form-control" %>
       <% end %>
-      <%= form.button :submit, "Submit", class: "btn btn-primary btn-lg mt-3 submit-new"%>
+      <%= form.button :submit, "Save", class: "btn btn-primary btn-lg mt-3 submit-new"%>
 <% end %>
   <% if form_type == "edit" %>
     <%= button_to "Delete Period", period_path(@period), method: :delete, class: "btn btn-danger btn-lg mt-3" %>

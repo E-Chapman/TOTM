@@ -1,3 +1,12 @@
+#new_period_day_symptom {
+  .button {
+    margin-top: 0;
+  }
+  label {
+    padding-top: 0;
+  }
+}
+
 .category-wrapper {
   display: flex;
   // justify-content: space-evenly;
@@ -49,7 +58,7 @@ abbr {
     padding: 8px;
     border: 1px solid #6f38c5;
     border-radius: 10px;
-    background: transparent;
+    background: #00000012;
     height: 70px;
     width: 109px;
     align-items: center;
@@ -113,6 +122,7 @@ h1, .h1 {
   font-weight: bold;
   text-align: center;
   padding-bottom: 30px;
+  font-family: 'Work Sans', Helvetica, sans-serif
 }
 
 .container {

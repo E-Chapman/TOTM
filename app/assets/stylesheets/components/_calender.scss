@@ -1,7 +1,8 @@
 .table, .table-striped, tr {
   height: 80px;
   background-color: transparent;
-  color: #6f38c5;;
+  color: #6f38c5;
+  font-size: 18px;
 }
 
 .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
@@ -31,7 +32,7 @@
 .calendar-heading a {
   font-weight: bold;
   text-decoration: none;
-  color: #92b4ec;
+  color: white;
   padding: 0 4px;
   font-size: 27px;
 }
@@ -45,34 +46,32 @@ span.calendar-title {
   size: auto;
  }
 
-.calender-button {
-  border: none;
-  cursor: pointer;
-  display: center;
-  opacity: 50%;
-  margin: 6px;
-  border-radius: 50px;
-  padding-bottom: 0px;
-  position: relative;
-  padding: 7px 17px;
-  top: 8px;
-  right: 6px;
-}
+// .calender-button {
+//   border: none;
+//   cursor: pointer;
+//   opacity: 50%;
+//   margin: 6px;
+//   border-radius: 50px;
+//   padding-bottom: 0px;
+//   position: relative;
+//   padding: 7px 17px;
+//   top: 8px;
+//   right: 6px;
+// }
 
-a.calender-button {
-  border: none;
-  cursor: pointer;
-  display: center;
-  opacity: 50%;
-  margin: 6px;
-  border-radius: 50px;
-  padding-bottom: 0px;
-  position: relative;
-  padding: 7px 17px;
-  top: 8px;
-  right: 6px;
-  background-color: transparent;
-}
+// a.calender-button {
+//   border: none;
+//   cursor: pointer;
+//   opacity: 50%;
+//   margin: 6px;
+//   border-radius: 50px;
+//   padding-bottom: 0px;
+//   position: relative;
+//   padding: 7px 17px;
+//   top: 8px;
+//   right: 6px;
+//   background-color: transparent;
+// }
 
 td.day.has-events {
   position: relative;
@@ -88,15 +87,18 @@ p.calender-day {
   font-weight: bold;
 }
 
-.period-day {
+.period-event-absolute{
   position: absolute;
-  background-color: #6f38c5;
   width: 90%;
   height: 56%;
   top: 18px;
   left: 3px;
-  opacity: 50%;
+}
+
+.period-day {
+  background-color: #6f38c5;
   border-radius: 50%;
+  z-index: -1;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) > * {
@@ -133,4 +135,24 @@ td.day.wday-6.future.next-month > .calender-day {
 
 td.day.wday-0.future.next-month > .calender-day {
   color: #ffffff52;
+}
+
+td.day.past.next-month > .calender-day  {
+  color: #ffffff52;
+}
+
+td.day {
+  width: 50px;
+}
+
+td.day p {
+  vertical-align: middle;
+}
+
+td.day a {
+ display: block;
+ width: 100%;
+}
+td.day a:hover, td.day a:focus{
+  background-color: transparent;
 }

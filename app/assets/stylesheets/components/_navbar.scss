@@ -1,17 +1,19 @@
-// @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
-// body {
-//   font: 100% Roboto, sans-serif;
-//   background: url(http://wallpapercave.com/wp/aZlqiAT.png) 50% 50% no-repeat;
-//   background-size: cover;
-//   padding: 50px;
-//   margin: 0;
-// }
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+body {
+  // font-family: Roboto;
+  // background: url(http://wallpapercave.com/wp/aZlqiAT.png) 50% 50% no-repeat;
+  // background-size: cover;
+  // padding: 50px;
+  // margin: 0;
+}
+
 
 .new-navbar {
   // width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: -50px;
+  overflow: hidden;
   // margin-bottom: -20%;
 }
 
