@@ -7,51 +7,53 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "Cleaning database..."
+PeriodDaySymptom.destroy_all
 PhysicalSymptom.destroy_all
 Mood.destroy_all
 Flow.destroy_all
 puts "Destroying Users..."
+Period.destroy_all
 User.destroy_all
 
 puts "Welcoming users..."
 
 [
-    { email: 'yulin@me.com', password: 'P@ssword1' },
-    { email: 'ruqiya@me.com', password: 'P@ssword1' },
-    { email: 'tristan@me.com', password: 'P@ssword1' },
-    { email: 'lucy@me.com', password: 'P@ssword1' },
-    { email: 'elizabeth@me.com', password: 'P@ssword1' }
-  ].each do |user_data| # Iterate over each set of user data...
-    # ...create a user with each set of data...
-    User.create!(user_data)
-    # If we reach this line, the user was created (otherwise an exception will have been raised),
-    # therefore no need to save the user in to a variable for putsing data to the terminal.
-    puts "User with email: #{user_data["email"]} successfully created!"
-  end
+  { email: 'yulin@me.com', password: 'P@ssword1' },
+  { email: 'ruqiya@me.com', password: 'P@ssword1' },
+  { email: 'tristan@me.com', password: 'P@ssword1' },
+  { email: 'lucy@me.com', password: 'P@ssword1' },
+  { email: 'elizabeth@me.com', password: 'P@ssword1' }
+].each do |user_data| # Iterate over each set of user data...
+  # ...create a user with each set of data...
+  User.create!(user_data)
+  # If we reach this line, the user was created (otherwise an exception will have been raised),
+  # therefore no need to save the user in to a variable for putsing data to the terminal.
+  puts "User with email: #{user_data['email']} successfully created!"
+end
 
 puts "Creating Physical symptoms"
 
 physical_symptoms = [
-  { name: "Cramps", emoji: "🌩" },
-  { name: "Back pain", emoji: "🙆‍♀️" },
+  { name: "Back Pain", emoji: "🙆‍♀️" },
   { name: "Bloating", emoji: "🎈" },
   { name: "Gas", emoji: "💨" },
   { name: "Headaches", emoji: "💆‍♀️" },
-  { name: "Breast Tenderness", emoji: "🌺" },
+  { name: "Tender Breasts", emoji: "🌺" },
   { name: "Diarrhoea", emoji: "🧻" },
   { name: "Constipation", emoji: "💩" },
   { name: "Fever", emoji: "🔥" },
+  { name: "Cramps", emoji: "🌩" },
   { name: "Craving", emoji: "🍫" },
   { name: "Insomnia", emoji: "🌠" },
   { name: "Irritabilty", emoji: "💣" },
-  { name: "Migranes", emoji: "💥" },
+  { name: "Migrane", emoji: "💥" },
   { name: "Stress", emoji: "💢" },
-  { name: "Weight gain", emoji: "➕" },
-  { name: "Nausea and vomiting", emoji: "🤮" },
+  { name: "Weight Gain", emoji: "➕" },
+  { name: "Nausea", emoji: "🤮" },
   { name: "Acne", emoji: "🐞" },
-  { name: "Abdominal pain", emoji: "🙇‍♀️" },
+  { name: "Tummy Ache", emoji: "🙇‍♀️" },
   { name: "Fatigue", emoji: "😮‍💨" },
-  { name: "Perineum pain", emoji: "⚡️" },
+  { name: "Perineum Pain", emoji: "⚡️" },
   { name: "Swelling", emoji: "🦵" }
 ]
 
@@ -63,7 +65,6 @@ end
 
 puts "Finished!"
 
-
 puts "Creating Moods"
 
 mood = [
@@ -72,11 +73,11 @@ mood = [
   { name: "Good", emoji: "🙂" },
   { name: "Energised", emoji: "💫" },
   { name: "Meh", emoji: "😑" },
-  { name: "Duvet day", emoji: "🫣" },
+  { name: "Duvet Day", emoji: "🫣" },
   { name: "Irritable", emoji: "😠" },
-  { name: "Don't mess with me", emoji: "🤬" },
+  { name: "Beep Off", emoji: "🤬" },
   { name: "Frisky", emoji: "🫦" },
-  { name: "Neither here nor there", emoji: "🤷🏽‍♀️" },
+  { name: "Sigh", emoji: "🤷🏽‍♀️" },
   { name: "Down", emoji: "🥺" },
   { name: "Tearful", emoji: "😢" },
   { name: "Sensitive", emoji: "😳" },
