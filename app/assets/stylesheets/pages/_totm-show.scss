@@ -5,6 +5,9 @@
   label {
     padding-top: 0;
   }
+  .period_day_symptom_notes label {
+    font-size: 24px;
+  }
   legend {
     margin-bottom: 6px;
     padding-bottom: 0;
@@ -131,7 +134,7 @@ h1, .h1 {
   font-weight: bold;
   text-align: center;
   padding-bottom: 30px;
-  font-family: 'Work Sans', Helvetica, sans-serif
+  font-family: "Nunito", "Helvetica", "sans-serif";
 }
 
 .container {
