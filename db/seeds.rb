@@ -34,11 +34,11 @@ end
 puts "Creating Physical symptoms"
 
 physical_symptoms = [
-  { name: "Back pain", emoji: "🙆‍♀️" },
+  { name: "Back Pain", emoji: "🙆‍♀️" },
   { name: "Bloating", emoji: "🎈" },
   { name: "Gas", emoji: "💨" },
   { name: "Headaches", emoji: "💆‍♀️" },
-  { name: "Breast Tenderness", emoji: "🌺" },
+  { name: "Tender Breasts", emoji: "🌺" },
   { name: "Diarrhoea", emoji: "🧻" },
   { name: "Constipation", emoji: "💩" },
   { name: "Fever", emoji: "🔥" },
@@ -48,12 +48,12 @@ physical_symptoms = [
   { name: "Irritabilty", emoji: "💣" },
   { name: "Migrane", emoji: "💥" },
   { name: "Stress", emoji: "💢" },
-  { name: "Weight gain", emoji: "➕" },
+  { name: "Weight Gain", emoji: "➕" },
   { name: "Nausea", emoji: "🤮" },
   { name: "Acne", emoji: "🐞" },
-  { name: "Abdominal pain", emoji: "🙇‍♀️" },
+  { name: "Tummy Ache", emoji: "🙇‍♀️" },
   { name: "Fatigue", emoji: "😮‍💨" },
-  { name: "Perineum pain", emoji: "⚡️" },
+  { name: "Perineum Pain", emoji: "⚡️" },
   { name: "Swelling", emoji: "🦵" }
 ]
 
@@ -73,9 +73,9 @@ mood = [
   { name: "Good", emoji: "🙂" },
   { name: "Energised", emoji: "💫" },
   { name: "Meh", emoji: "😑" },
-  { name: "Duvet day", emoji: "🫣" },
+  { name: "Duvet Day", emoji: "🫣" },
   { name: "Irritable", emoji: "😠" },
-  { name: "Beep off", emoji: "🤬" },
+  { name: "Beep Off", emoji: "🤬" },
   { name: "Frisky", emoji: "🫦" },
   { name: "Sigh", emoji: "🤷🏽‍♀️" },
   { name: "Down", emoji: "🥺" },
