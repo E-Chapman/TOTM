@@ -5,6 +5,10 @@
   label {
     padding-top: 0;
   }
+  legend {
+    margin-bottom: 6px;
+    padding-bottom: 0;
+  }
 }
 
 .category-wrapper {
@@ -16,6 +20,10 @@
   color: crimson;
   font-weight: normal;
   font-size: xx-large;
+}
+
+.category-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 abbr {
@@ -59,8 +67,9 @@ abbr {
     border: 1px solid #6f38c5;
     border-radius: 10px;
     background: #00000012;
-    height: 70px;
-    width: 109px;
+    height: 85px;
+    min-width: 109px;
+    width: max-content;
     align-items: center;
     justify-content: center;
     margin: 0 8px;
