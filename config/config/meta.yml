@@ -1,0 +1,5 @@
+meta_product_name: "TOTM"
+meta_title: "TOTM - Know your normal - free period and health tracker"
+meta_description: "Track your cycle with the TOTM app, a free period tracker for iPhone and Android."
+meta_image: "totm.png" # should exist in `app/assets/images/`
+twitter_account: "@TOTM" # required for Twitter Cards

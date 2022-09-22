@@ -1,5 +1,6 @@
 <% if @period_day_symptom.nil? %>
-<p>No symptoms set yet</p>
+  <p>No symptoms set yet</p>
+  <%= button_to "Delete Period", @period, method: :delete, class: "btn btn-danger btn-lg mt-3", style:"margin-bottom: 16px;" %>
 <% else  %>
 
 <h1 class="heading">Your Symptoms</h1>
