@@ -16,7 +16,7 @@
         <tbody>
         <% @reminders.each do |reminder| %>
           <tr>
-            <td class="align-middle"><%= reminder.reminder_date %> </td>
+            <td class="align-middle"><%= reminder.reminder_date.strftime("%e %b %Y %H:%M") %> </td>
             <td class="align-middle"><%= reminder.body %> </td>
             <td class="align-middle">
               <%= link_to edit_reminder_path(reminder), method: :get, class: "btn btn-primary reminder-button" do %>
