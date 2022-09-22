@@ -2,9 +2,9 @@
   <h1> Add Reminder </h1>
   <div class="form-container text-center pb-4">
     <%= simple_form_for ([@reminder]) do |form| %>
-      <%= form.label "Reminder Text", class: "reminder-label" %>
+      <%= form.label "Don't Forget", class: "reminder-label" %>
       <%= form.text_field :body, as: :text, :input_html => {:rows => 3}, class: "form-control reminder-form", label: false %>
-      <%= form.label "Reminder Date", class: "reminder-label" %>
+      <%= form.label "Date", class: "reminder-label" %>
       <%= form.datetime_field :reminder_date , class: "form-control reminder-form"%>
       <%= form.button :submit, "Submit", class: "btn btn-primary btn-lg reminder-button mt-3"%>
     <% end %>
