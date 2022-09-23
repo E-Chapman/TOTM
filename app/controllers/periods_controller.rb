@@ -29,13 +29,13 @@ class PeriodsController < ApplicationController
     get_period
     @period.update(period_params)
     @period.save
-    redirect_to action: "index"
+    redirect_to periods_path
   end
 
   def destroy
     get_period
     @period.destroy
-    redirect_to action: "index"
+    redirect_to periods_path
   end
 
   private

@@ -17,20 +17,20 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params)
     @reminder.user_id = current_user.id
     @reminder.save
-    redirect_to action: "index"
+    redirect_to reminders_path
   end
 
   def update
     get_reminder
     @reminder.update(reminder_params)
     @reminder.save
-    redirect_to action: "index"
+    redirect_to reminders_path
   end
 
   def destroy
     get_reminder
     @reminder.destroy
-    redirect_to action: "index"
+    redirect_to reminders_path
   end
 
   def edit
