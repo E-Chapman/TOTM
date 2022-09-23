@@ -148,6 +148,7 @@ h1, .h1 {
   width: 100% !important;
   margin-left: 0px !important;
   font-size: 1rem !important;
+  text-align: center;
 }
 
 .reminder-label {
@@ -164,9 +165,9 @@ h1, .h1 {
 .reminder-table {
   table-layout:fixed;
   text-align:center;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #E8A0BF;
+  // border-radius: 10px;
+  // overflow: hidden;
+  // background-color: #E8A0BF;
   border-color: #6f38c5;
 }
 
