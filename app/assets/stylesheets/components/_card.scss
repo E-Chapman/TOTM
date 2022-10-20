@@ -281,7 +281,7 @@ label {
   background-size: cover;
   background-position: center;
   height: 250px;
-  width: 250px;
+  max-width: 380px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: flex;
@@ -301,12 +301,17 @@ label {
 
 div.scroll {
   background-color: transparent;
-  width: 600px;
-  height: 658px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  // width: 600px;
+  // height: 658px;
+  // overflow-x: hidden;
+  // overflow-y: auto;
   text-align: center;
   padding: 20px;
+  width:100%;
+  max-width: 1120px;
+  height: 650px;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .notes {

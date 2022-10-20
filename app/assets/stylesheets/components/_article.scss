@@ -33,7 +33,8 @@
   color: white;
   display: block;
   text-align: center;
-  width: 248px;
+  // width: 248px;
+  width:100%;
   text-shadow: 3px 3px 20px #EE6983,
   -2px 1px 30px #EE6983;
 }
@@ -44,7 +45,8 @@
   color: white;
   display: block;
   text-align: center;
-  width: 248px;
+  // width: 248px;
+  width:100%;
 }
 
 
@@ -53,7 +55,8 @@
   color: white;
   display: block;
   text-align: center;
-  width: 248px;
+  // width: 248px;
+  width:100%;
 }
 
 .story-content-3{
@@ -61,14 +64,16 @@
   color: white;
   display: block;
   text-align: center;
-  width: 248px;
+  // width: 248px;
+  width:100%;
 }
 
 
 
 div.scroll-story {
   background-color: transparent;
-  width: 368px;
+  // width: 368px;
+  width:100%;
   height: 658px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -105,7 +110,8 @@ a:link {
   border-radius: 5px;
   padding: 20px;
   margin: 0 auto;
-  max-width: 315px;
+  max-width: 600px;
+  // width:100%;
 }
 
 ul {
@@ -114,7 +120,8 @@ ul {
   font-size: 15px;
   color: white;
   display: block;
-  width: 248px;
+  // width: 248px;
+  width:100%;
 }
 
 ul li {
